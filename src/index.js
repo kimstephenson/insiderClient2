@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './scripts/components/app';
-import Info from './scripts/components/Info';
+import CompanyHeader from './scripts/components/CompanyHeader';
 import './css/index.css';
-import { Router, Route, BrowserHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router'
 
 ReactDOM.render((
-  <Router history={BrowserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={App}/>
-    <Route path="/companies" component={Info}/>
+    <Route path="/companies/:companyName" component={CompanyHeader}/>
   </Router>
   ), document.getElementById('root'))
 
