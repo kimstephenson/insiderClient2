@@ -10,7 +10,8 @@ var Search = React.createClass({
   handleCompanyChange: function(e) {
     this.setState({company: e.target.value})
   },
-  handleSubmit: function() {
+  handleSubmit: function(e) {
+    e.preventDefault()
     this.context.router.push('/companies/' + this.state.company)
   },
   render: function() {
