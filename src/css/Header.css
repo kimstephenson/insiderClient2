@@ -1,0 +1,10 @@
+.Header {
+  border: 2px solid black;
+  border-radius:20px;
+  text-align: center;
+  background: #f5f5f5;
+  color: #333;
+  margin: auto;
+  padding: 20px;
+  width: 70%;
+}
