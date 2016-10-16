@@ -7,7 +7,7 @@ var HeatMap = React.createClass({
   },
   componentWillMount: function() {
     $.ajax({
-      url: "https://insiderapi.herokuapp.com",
+      url: "https://insiderapi.herokuapp.com/companies",
       dataType: "json",
       success: function(data) {
         console.log(data)
@@ -20,9 +20,13 @@ var HeatMap = React.createClass({
   },
   render: function() {
     return(
-      <div className="HeatMap">
-        <p>Our pretty graph will go here.</p>
-      </div>
+      <ul className="HeatMap">
+        {
+          this.state.data.map(function(co) {
+            return <li key={co.id}>{co.name}</li>
+          })
+        }
+      </ul>
     )
   }
 })
