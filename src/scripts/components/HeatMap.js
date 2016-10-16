@@ -10,7 +10,6 @@ var HeatMap = React.createClass({
       url: "https://insiderapi.herokuapp.com/companies",
       dataType: "json",
       success: function(data) {
-        console.log(data)
         this.setState({data: data})
       }.bind(this),
       error: function(xhr, status, err) {
@@ -23,7 +22,7 @@ var HeatMap = React.createClass({
       <ul className="HeatMap">
         {
           this.state.data.map(function(co) {
-            return <li key={co.id}>{co.name}</li>
+            return <li key={co.id}>{co.name} - {co.cik_number}</li>
           })
         }
       </ul>
