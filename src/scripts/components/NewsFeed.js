@@ -6,8 +6,11 @@ const NewsFeed = React.createClass({
   render: function() {
     return(
       <div className="news-feed">
-        <h1>We're talking about {this.props.companyName} here...</h1>
-        <News />
+        <h2>{this.props.companyName.replace(/\b[a-z]/g,function(f){
+                return f.toUpperCase()
+              })} News Feed
+        </h2>
+        <News companyName={this.props.companyName} />
       </div>
     )
   }
