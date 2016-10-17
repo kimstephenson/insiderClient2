@@ -6,8 +6,8 @@ const NewsFeed = React.createClass({
   render: function() {
     return(
       <div className="news-feed">
-        <h1>We're talking about {this.props.companyName} here...</h1>
-        <News />
+        <h1>{this.props.companyName} News Feed</h1>
+        <News companyName={this.props.companyName} />
       </div>
     )
   }
