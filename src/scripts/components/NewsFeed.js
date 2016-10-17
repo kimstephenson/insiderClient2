@@ -1,9 +1,16 @@
-var React = require('react')
+const React = require('react')
+import News from './News'
 
-var NewsFeed = React.createClass({
+const NewsFeed = React.createClass({
   // 
-
-  
+  render: function() {
+    return(
+      <div className="news-feed">
+        <h1>We're talking about {this.props.companyName} here...</h1>
+        <News />
+      </div>
+    )
+  }
 })
 
 
