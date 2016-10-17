@@ -6,9 +6,9 @@ import './css/index.css';
 import { Router, Route, browserHistory } from 'react-router'
 
 ReactDOM.render((
-  <Router history={browserHistory}>
-    <Route path="/" component={App}/>
-    <Route path="/companies/:companyName" component={CompanyShow}/>
-  </Router>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}/>
+      <Route path="/companies/:companyName" component={CompanyShow}/>
+    </Router>
   ), document.getElementById('root'))
 
