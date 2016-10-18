@@ -34,7 +34,7 @@ var Search = React.createClass({
       return (
         <li>
           <h2>
-            <a href={`/companies/${this.state.searchTerm}`} >
+            <a href={`/companies/${company}`} >
             {company.name}</a>
           </h2>
           <h3>{company.insiders} Insiders</h3>
