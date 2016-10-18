@@ -12,6 +12,7 @@
     "mongoose": "^4.6.3",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-faux-dom": "^3.0.0",
     "react-router": "^2.8.1",
     "react-scripts": "0.6.1",
     "superagent": "^2.3.0"
