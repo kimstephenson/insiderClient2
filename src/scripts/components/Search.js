@@ -13,7 +13,7 @@ var Search = React.createClass({
     this.setState({searchTerm: e.target.value})
   },
   handleSubmit: function(e) {
-    console.log('handling submit')
+    // console.log('handling submit')
     e.preventDefault()
     this.setState({
       searchTerm: this.state.searchTerm
@@ -27,7 +27,7 @@ var Search = React.createClass({
       })
     })
     // display search results
-    this.context.router.push('/search/')
+    this.context.router.push('/search/' + this.state.searchTerm)
   },
   render: function() {
     var searchResults = _.map(this.state.searchResults, (company) => {

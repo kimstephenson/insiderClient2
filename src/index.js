@@ -10,7 +10,7 @@ ReactDOM.render((
     <Router history={browserHistory}>
       <Route path="/" component={App}/>
       <Route path="/companies/:companyName" component={CompanyShow}/>
-      <Route path="/search" component={Search}/>
+      <Route path="/search/:searchTerm" component={Search}/>
     </Router>
   ), document.getElementById('root'))
 
