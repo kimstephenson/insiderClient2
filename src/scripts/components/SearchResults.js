@@ -11,7 +11,6 @@ var SearchResults = React.createClass({
       dataType: "json",
       success: function(data) {
         this.setState({data: data})
-        console.log(data)
       }.bind(this),
       error: function(xhr, status, err) {
         console.error(this, status, err.toString())
@@ -23,7 +22,7 @@ var SearchResults = React.createClass({
       <div>
         {this.state.data.map(function(co) {
           return (
-            <div id={co.id}>
+            <div key={co.id}>
               <a href={`/companies/${co.id}`}>{co.name}</a>
               <p>Total insiders: {co.insiders}</p>
               <p>Monthly Transactions: {co.monthly_total}</p>
