@@ -25,7 +25,7 @@ const News = React.createClass({
   render: function() {
     var articles = _.map(this.state.articles, (article) => {
       return (
-        <li>
+        <li key={article.thread.uuid}>
           <a href={article.thread.url}>
             <img className='news-img' src={article.thread.main_image} alt='main-img' />
           </a>
