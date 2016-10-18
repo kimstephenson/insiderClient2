@@ -15,7 +15,7 @@ const randomDataSet = () => {
   return Array.apply(null, {length: numDataPoints}).map(() => [randomNum(), randomNum()])
 }
 
-export default class TradeChart extends React.Component {
+export default class TransactionChart extends React.Component {
   constructor(props) {
     super(props)
     this.state = { data: randomDataSet() }
