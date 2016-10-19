@@ -71,7 +71,7 @@ console.log(this.props.sells.sells)
         headerFormat: '<table>',
         pointFormat: '<tr><th colspan="3"><h3>{point.name}</h3></th></tr>' +
             '<tr><th>{point.relationship}</th><td></td></tr>' +
-            '<tr><th>Date:</th><td>{point.x}</td></tr>' +
+            '<tr><th>Date:</th><td>{point.date_string}</td></tr>' +
             '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
             '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
             '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
