@@ -1,9 +1,9 @@
 var React = require('react');
 import '../../../css/app.css'
 import Header from './Header'
-import Info from './Info'
-import HeatMap from './HeatMap'
+import AppInfo from './AppInfo'
 import Search from '../SearchComponents/Search'
+import MainChart from './MainChart'
 
 
 var App = React.createClass({
@@ -18,17 +18,17 @@ var App = React.createClass({
             <Search/>
           </div>
           <div className="cluster-chart">
-            <HeatMap/>
+            <MainChart/>
           </div>
 
           <div className="news">
-            // <Info/>
+
           </div>
           <div className="transaction-list">
 
           </div>
           <div className="footer">
-
+            <AppInfo/>
           </div>
 
         </div>
