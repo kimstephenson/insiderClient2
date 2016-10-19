@@ -3,7 +3,7 @@ import '../../css/app.css'
 import Header from './Header'
 import Info from './Info'
 import HeatMap from './HeatMap'
-import Search from './Search'
+import Search from './search/Search'
 
 var App = React.createClass({
   render: function() {

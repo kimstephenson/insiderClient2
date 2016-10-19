@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './scripts/components/app';
 import CompanyShow from './scripts/components/CompanyShow';
-import SearchPage from './scripts/components/SearchPage'
+import SearchPage from './scripts/components/search/SearchPage'
 import './css/index.css';
 import { Router, Route, browserHistory } from 'react-router'
 
