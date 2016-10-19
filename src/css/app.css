@@ -1,6 +1,6 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
 
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
   height: 100%;
@@ -12,6 +12,7 @@ body {
   min-height: 100%;
   padding: 0;
   background-color: #33424D;
+  font-family: 'Roboto Slab', serif;
 }
 
 .container {
@@ -27,35 +28,3 @@ body {
   margin-bottom: 2px;
 }
 
-.stats {
-  width: 100%;
-  display: flex;
-  /*justify-content: center;*/
-  justify-content: space-between;
-  align-items: center;
-    height: 221px;
-}
-
-.stats .stat {
-  width:32%;
-  text-align: center;
-  color: #fff;
-  background-color: #4E5E6E;
-  padding-top: 45px;
-  padding-bottom: 45px;
-  /*no % for vertical*/
-  /*align-items: center;*/
-
-}
-
-.stats .stat .number {
-  font-size: 40px;
-  font-family: 'Roboto Slab', serif;
-  font-weight: lighter;
-}
-
-.stats .stat .mustache-header {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  margin:
-}

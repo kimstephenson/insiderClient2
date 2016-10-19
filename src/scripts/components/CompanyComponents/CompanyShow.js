@@ -6,12 +6,11 @@ import NewsFeed from './NewsFeed'
 var CompanyShow = React.createClass({
   render: function() {
     return(
-      <div className="companyShow">
-        <CompanyHeader companyName={this.props.params.companyName}/>
-        <CompanyBubbleChart/>
-        <div className="news">
-          <NewsFeed companyName={this.props.params.companyName} />
-        </div>
+      <div>
+          <CompanyHeader companyName={this.props.params.companyName}/>
+          <CompanyBubbleChart/>
+
+        <NewsFeed companyName={this.props.params.companyName}/>
       </div>
     )
   }

@@ -20,23 +20,7 @@ var App = React.createClass({
           <div className="cluster-chart">
             <HeatMap/>
           </div>
-          <div className="stats">
-            <div className="stat">
-              <div className="number">6.5</div>
-              <div className="mustache-header">Confidence Rating</div>
-            </div>
 
-            <div className="stat">
-              <div className="number">8</div>
-              <div className="mustache-header">Insiders</div>
-            </div>
-
-            <div className="stat">
-              <div className="number">$1.2B</div>
-              <div className="mustache-header">Total Traded this Quarter</div>
-            </div>
-
-          </div>
           <div className="news">
             // <Info/>
           </div>
