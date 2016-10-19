@@ -1,8 +1,8 @@
 import React from 'react'
 import Request from 'superagent'
 import _ from 'lodash'
-import '../../css/news.css'
-import config from '../../../config.json'
+import '../../../css/news.css'
+import config from '../../../../config.json'
 
 const News = React.createClass({
   getInitialState: function() {
