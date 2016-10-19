@@ -1,7 +1,7 @@
 var React = require('react');
 import '../../../css/app.css'
 import Header from './Header'
-import Info from './Info'
+import AppInfo from './Info'
 import HeatMap from './HeatMap'
 import Search from '../SearchComponents/Search'
 
@@ -10,7 +10,7 @@ var App = React.createClass({
     return(
       <div className="App">
         <Header/>
-        <Info/>
+        <AppInfo/>
         <HeatMap/>
         <Search/>
       </div>
