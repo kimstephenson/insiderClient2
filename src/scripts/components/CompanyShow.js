@@ -3,7 +3,6 @@ var ReactHighcharts = require('react-highcharts')
 var Highcharts = require('highcharts')
 var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
 import CompanyHeader from './CompanyHeader'
-import CompanyData from './CompanyData'
 import NewsFeed from './NewsFeed'
 import TransactionChart from './TransactionChart'
 
@@ -88,7 +87,6 @@ var CompanyShow = React.createClass({
         <CompanyHeader companyName={this.props.params.companyName}/>
         <TransactionChart companyName={this.props.params.companyName} />
         <NewsFeed companyName={this.props.params.companyName} />
-        <CompanyData/>
         <ReactHighcharts config={chartOptions} ref="chart"/>
       </div>
     )
