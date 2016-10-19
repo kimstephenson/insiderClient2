@@ -9,7 +9,9 @@ var CompanyShow = React.createClass({
       <div className="companyShow">
         <CompanyHeader companyName={this.props.params.companyName}/>
         <CompanyBubbleChart/>
-        <NewsFeed companyName={this.props.params.companyName} />
+        <div className="news">
+          <NewsFeed companyName={this.props.params.companyName} />
+        </div>
       </div>
     )
   }

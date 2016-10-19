@@ -8,3 +8,24 @@
   padding: 20px;
   width: 70%;
 }
+
+.HeaderBar {
+  display: flex;
+  width: 900px;
+  /* flex box : allows boxes and layout easier */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HeaderBar ul li {
+  float: left;
+  list-style: none;
+}
+
+.useractions {
+  float: right;
+}
+
+.search {
+  float: right;
+}
