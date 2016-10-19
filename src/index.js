@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './scripts/components/app';
+import App from './scripts/components/HomepageComponents/app';
 import CompanyShow from './scripts/components/CompanyShow';
-import SearchPage from './scripts/components/search/SearchPage'
+import SearchPage from './scripts/components/SearchComponents/SearchPage'
 import './css/index.css';
 import { Router, Route, browserHistory } from 'react-router'
 

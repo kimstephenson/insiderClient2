@@ -1,9 +1,9 @@
 var React = require('react');
-import '../../css/app.css'
+import '../../../css/app.css'
 import Header from './Header'
 import Info from './Info'
 import HeatMap from './HeatMap'
-import Search from './search/Search'
+import Search from '../SearchComponents/Search'
 
 var App = React.createClass({
   render: function() {
