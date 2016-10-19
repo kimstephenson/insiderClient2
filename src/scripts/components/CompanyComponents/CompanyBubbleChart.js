@@ -143,7 +143,7 @@ var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
   var CompanyBubbleChart = React.createClass({
     render: function() {
     console.log("sells:")
-    console.log(this.props.sells)
+    console.log(this.props.sells.sells)
       return(<ReactHighcharts config={
         { chart: {
             type: 'bubble',
@@ -221,7 +221,7 @@ var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
                 '<tr><th>Date:</th><td>{point.x}</td></tr>' +
                 '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
                 '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
-                '<tr><th>Price Per Share:</th><td>\${point.pps}</td></tr>' +
+                '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
                 '<tr><th>Value Traded:</th><td>\${point.z}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
@@ -238,7 +238,7 @@ var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
 
         series: [{
             name: "Sells",
-            data: this.props.sells,
+            data: this.props.sells.sells,
             marker: {
                 fillColor: {
                     radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
@@ -250,7 +250,7 @@ var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
             }
         }, {
             name: "Buys",
-            data: this.props.buys,
+            data: this.props.buys.buys,
             marker: {
                 fillColor: {
                     radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
