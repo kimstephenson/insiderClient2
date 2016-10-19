@@ -7,6 +7,7 @@ var chartOptions = { chart: {
             type: 'bubble',
             plotBorderWidth: 1,
             zoomType: 'xy'
+            // backgroundColor: "#32424B"
         },
 
         title: {
