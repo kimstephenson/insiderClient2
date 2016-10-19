@@ -1,7 +1,7 @@
 var React = require('react');
 import '../../../css/app.css'
 import Header from './Header'
-import AppInfo from './Info'
+import AppInfo from './AppInfo'
 import HeatMap from './HeatMap'
 import Search from '../SearchComponents/Search'
 import MainChart from './MainChart'
