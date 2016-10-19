@@ -4,15 +4,6 @@ import SearchResults from './SearchResults'
 import $ from 'jquery'
 
 var SearchPage = React.createClass({
-  // shouldComponentUpdate: function(nextProps, nextState) {
-  //   console.log(nextProps.params.searchTerm)
-  //   console.log(this.props.params.searchTerm)
-  //   console.log(nextProps.params.searchTerm !== this.props.params.searchTerm)
-  //   return nextProps.params.searchTerm !== this.props.params.searchTerm
-  // },
-  // componentWillReceiveProps: function(nextProps) {
-  //   console.log(nextProps.params.searchTerm)
-  // },
   getInitialState: function() {
     return{ results : [] }
   },

@@ -1,10 +1,7 @@
-var React = require ('react')
+var React = require('react')
 var ReactHighcharts = require('react-highcharts')
 var Highcharts = require('highcharts')
 var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
-import CompanyHeader from './CompanyHeader'
-import NewsFeed from './NewsFeed'
-import TransactionChart from './TransactionChart'
 
 var chartOptions = { chart: {
             type: 'bubble',
@@ -80,17 +77,10 @@ var chartOptions = { chart: {
         }]
      }
 
-var CompanyShow = React.createClass({
-  render: function() {
-    return(
-      <div className="companyShow">
-        <CompanyHeader companyName={this.props.params.companyName}/>
-        <TransactionChart companyName={this.props.params.companyName} />
-        <NewsFeed companyName={this.props.params.companyName} />
-        <ReactHighcharts config={chartOptions} ref="chart"/>
-      </div>
-    )
-  }
-})
+  var CompanyBubbleChart = React.createClass({
+    render: function() {
+      return(<ReactHighcharts config={chartOptions} ref="chart"/>)
+    }
+  })
 
-export default CompanyShow
+  export default CompanyBubbleChart

@@ -1,5 +1,5 @@
 var React = require('react')
-import '../../css/Header.css'
+import '../../../css/Header.css'
 
 var Header = React.createClass({
   render: function() {
