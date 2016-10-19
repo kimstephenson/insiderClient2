@@ -45,7 +45,6 @@ var SearchPage = React.createClass({
       <div className="SearchPage">
         <Search/>
         <SearchResults searchTerm={this.props.params.searchTerm} results={this.state.results}/>
-        {console.log(this.props.params.searchTerm)}
       </div>
     )
   }
