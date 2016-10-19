@@ -4,6 +4,12 @@ import CompanyHeader from './CompanyHeader'
 import NewsFeed from './NewsFeed'
 
 var CompanyShow = React.createClass({
+  getInitialState: function() {
+    return {data:[]}
+  },
+  componentWillMount: function() {
+
+  },
   render: function() {
     return(
       <div className="companyShow">
