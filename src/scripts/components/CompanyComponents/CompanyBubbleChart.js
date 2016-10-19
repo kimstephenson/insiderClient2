@@ -78,7 +78,7 @@ var chartOptions = { chart: {
                 '<tr><th>Date:</th><td>{point.x}</td></tr>' +
                 '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
                 '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
-                '<tr><th>Price Per Share:</th><td>{point.ppa}</td></tr>' +
+                '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
                 '<tr><th>Value Traded:</th><td>{point.z}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
