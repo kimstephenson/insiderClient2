@@ -14,30 +14,96 @@ var chartOptions = { chart: {
         },
 
         xAxis: {
-            gridLineWidth: 1
+            gridLineWidth: 1,
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                day: '%e. %b'
+            },
+            // categories: self.props.readinglevels.map(function(o) {
+            //     return o.name;
+            // }),
+            // max: self.props.readinglevels.length - 1,
+            title: {
+                text: ''
+            },
+            labels: {
+                style: {
+                color: 'rgba(0, 0, 0, 0.50)',
+                fontSize: '12px'
+                },
+                formatter: function() {
+                    return Highcharts.dateFormat('%m/%d', this.value)
+                }
+            },
+            tickPixelInterval: 200
         },
 
         yAxis: {
             startOnTick: false,
-            endOnTick: false
+            endOnTick: false,
+            allowDecimals: false,
+          labels: {
+            format: '{value}',
+            step: 1,
+            // formatter: function() {
+
+            //   if( this.value >= 0 && this.value < 7 ) {
+            //     return Constants.GRADES[this.value]
+            //   }
+            //   return ''              
+            // },
+            style: {
+              color: 'rgba(0, 0, 0, 0.50)',
+              fontSize: '12px'
+            }
+          },
+          min: 0,
+          max: 11,
+          minTickInterval: 1,
+          tickInterval: 1,
+          minPadding: 1,
+          maxPadding: 0.5,
+          minRange: 7,
+          plotLines: [{
+            color: 'black'
+          }],
+          title: 'Insider Score'
         },
+
+         tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="3"><h3>{point.name}</h3></th></tr>' +
+                '<tr><th>{point.relationship}</th><td></td></tr>' +
+                '<tr><th>Date:</th><td>{point.x}</td></tr>' +
+                '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
+                '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
+                '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
+                '<tr><th>Value Traded:</th><td>{point.z}</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
+        //  plotOptions: {
+        //     series: {
+        //         dataLabels: {
+        //             enabled: true,
+        //             format: '{point.name}'
+        //         }
+        //     }
+        // },
 
         series: [{
             data: [
-                [9, 81, 63],
-                [98, 5, 89],
-                [51, 50, 73],
-                [41, 22, 14],
-                [58, 24, 20],
-                [78, 37, 34],
-                [55, 56, 53],
-                [18, 45, 70],
-                [42, 44, 28],
-                [3, 52, 59],
-                [31, 18, 97],
-                [79, 91, 63],
-                [93, 23, 23],
-                [44, 83, 22]
+                { x: 142084800000, y: 10, z: 1500000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000 , pps: 15 },
+                { x: 142084800000, y: 10, z: 1500000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000 , pps: 15 },
+                { x: 142352640000, y: 10, z: 1450000, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 14.6 },
+                { x: 142439040000, y: 10, z: 640000, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 14.6 },
+                { x: 142439040000, y: 10, z: 65721.6, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 14.18 },
+                { x: 142439040000, y: 10, z: 65721.6, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 14.18 },
+                { x: 142516800000, y: 6, z: 440884.56, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14 },
+                { x: 142539400000, y: 6, z: 440884.56, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14 },
+                { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 14.6 }  
             ],
             marker: {
                 fillColor: {
@@ -50,20 +116,13 @@ var chartOptions = { chart: {
             }
         }, {
             data: [
-                [42, 38, 20],
-                [6, 18, 1],
-                [1, 93, 55],
-                [57, 2, 90],
-                [80, 76, 22],
-                [11, 74, 96],
-                [88, 56, 10],
-                [30, 47, 49],
-                [57, 62, 98],
-                [4, 16, 16],
-                [46, 10, 11],
-                [22, 87, 89],
-                [57, 91, 82],
-                [45, 15, 98]
+                { x: 142214400000, y: 10, z: 640000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000, pps: 6.4 },
+                { x: 142214400000, y: 10, z: 640000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000, pps: 6.4 },
+                { x: 142352640000, y: 10, z: 149413.9, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 8 },
+                { x: 142352640000, y: 10, z: 149413.95, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 9.33 },
+                 { x: "2016-09-22", y: 6, z: 165693.3, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14.18 },
+                 { x: 142558900000, y: 6, z: 165693.3, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14.18 },
+                 { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 6.88 }  
             ],
             marker: {
                 fillColor: {
