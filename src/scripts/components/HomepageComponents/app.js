@@ -4,6 +4,7 @@ import Header from './Header'
 import Info from './Info'
 import HeatMap from './HeatMap'
 import Search from '../SearchComponents/Search'
+import MainChart from './MainChart'
 
 var App = React.createClass({
   render: function() {
@@ -12,6 +13,7 @@ var App = React.createClass({
         <Header/>
         <Info/>
         <HeatMap/>
+        <MainChart/>
         <Search/>
       </div>
     )
