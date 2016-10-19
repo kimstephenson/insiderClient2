@@ -81,15 +81,15 @@ var HighchartsTreemap = require('highcharts-treemap')(ReactHighcharts.Highcharts
             }
         },
          points = [],
-        regionP,
-        regionVal,
-        regionI = 0,
-        countryP,
-        countryI,
+        companyP,
+        companyVal,
+        companyI = 0,
+        insiderP,
+        insiderI,
         causeP,
         causeI,
-        region,
-        country,
+        company,
+        insider,
         cause,
         causeName = {
             'Communicable & other Group I': 'Communicable diseases',
@@ -97,43 +97,43 @@ var HighchartsTreemap = require('highcharts-treemap')(ReactHighcharts.Highcharts
             'Injuries': 'Injuries'
         };
 
-for (region in data) {
-        if (data.hasOwnProperty(region)) {
-            regionVal = 0;
-            regionP = {
-                id: 'id_' + regionI,
-                name: region,
-                color: Highcharts.getOptions().colors[regionI]
+for (company in data) {
+        if (data.hasOwnProperty(company)) {
+            companyVal = 0;
+            companyP = {
+                id: 'id_' + companyI,
+                name: company,
+                color: Highcharts.getOptions().colors[companyI]
             };
-            countryI = 0;
-            for (country in data[region]) {
-                if (data[region].hasOwnProperty(country)) {
-                    countryP = {
-                        id: regionP.id + '_' + countryI,
-                        name: country,
-                        parent: regionP.id
+            insiderI = 0;
+            for (insider in data[company]) {
+                if (data[company].hasOwnProperty(insider)) {
+                    insiderP = {
+                        id: companyP.id + '_' + insiderI,
+                        name: insider,
+                        parent: companyP.id
                     };
-                    points.push(countryP);
+                    points.push(insiderP);
                     causeI = 0;
-                    for (cause in data[region][country]) {
-                        if (data[region][country].hasOwnProperty(cause)) {
+                    for (cause in data[company][insider]) {
+                        if (data[company][insider].hasOwnProperty(cause)) {
                             causeP = {
-                                id: countryP.id + '_' + causeI,
+                                id: insiderP.id + '_' + causeI,
                                 name: causeName[cause],
-                                parent: countryP.id,
-                                value: Math.round(+data[region][country][cause])
+                                parent: insiderP.id,
+                                value: Math.round(+data[company][insider][cause])
                             };
-                            regionVal += causeP.value;
+                            companyVal += causeP.value;
                             points.push(causeP);
                             causeI = causeI + 1;
                         }
                     }
-                    countryI = countryI + 1;
+                    insiderI = insiderI + 1;
                 }
             }
-            regionP.value = Math.round(regionVal / countryI);
-            points.push(regionP);
-            regionI = regionI + 1;
+            companyP.value = companyVal;
+            points.push(companyP);
+            companyI = companyI + 1;
         }
     }
 
