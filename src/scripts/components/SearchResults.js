@@ -1,26 +1,10 @@
 import React from 'react'
-import $ from 'jquery'
 
 var SearchResults = React.createClass({
-  getInitialState: function() {
-    return {data: []}
-  },
-  componentWillMount: function() {
-    $.ajax({
-      url: "https://insiderapi.herokuapp.com/companies?search=" + this.props.searchTerm,
-      dataType: "json",
-      success: function(data) {
-        this.setState({data: data})
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this, status, err.toString())
-      }.bind(this)
-    })
-  },
   render: function() {
     return (
       <div>
-        {this.state.data.map(function(co) {
+        {this.props.results.map(function(co) {
           return (
             <div key={co.id}>
               <a href={`/companies/${co.id}`}>{co.name}</a>

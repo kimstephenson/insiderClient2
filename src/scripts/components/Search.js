@@ -10,7 +10,8 @@ var Search = React.createClass({
   handleSearchTermChange: function(e) {
     this.setState({searchTerm: e.target.value})
   },
-  handleSubmit: function() {
+  handleSubmit: function(e) {
+    e.preventDefault()
     this.context.router.push('/search/' + this.state.searchTerm)
   },
   render: function() {
