@@ -50,7 +50,7 @@ var chartOptions = { chart: {
             //   if( this.value >= 0 && this.value < 7 ) {
             //     return Constants.GRADES[this.value]
             //   }
-            //   return ''              
+            //   return ''
             // },
             style: {
               color: 'rgba(0, 0, 0, 0.50)',
@@ -78,8 +78,8 @@ var chartOptions = { chart: {
                 '<tr><th>Date:</th><td>{point.x}</td></tr>' +
                 '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
                 '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
-                '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
-                '<tr><th>Value Traded:</th><td>{point.z}</td></tr>',
+                '<tr><th>Price Per Share:</th><td>\${point.pps}</td></tr>' +
+                '<tr><th>Value Traded:</th><td>\${point.z}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -94,6 +94,7 @@ var chartOptions = { chart: {
         // },
 
         series: [{
+            name: "Sells",
             data: [
                 { x: 142084800000, y: 10, z: 1500000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000 , pps: 15 },
                 { x: 142084800000, y: 10, z: 1500000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000 , pps: 15 },
@@ -103,7 +104,7 @@ var chartOptions = { chart: {
                 { x: 142439040000, y: 10, z: 65721.6, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 14.18 },
                 { x: 142516800000, y: 6, z: 440884.56, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14 },
                 { x: 142539400000, y: 6, z: 440884.56, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14 },
-                { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 14.6 }  
+                { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 14.6 }
             ],
             marker: {
                 fillColor: {
@@ -115,6 +116,7 @@ var chartOptions = { chart: {
                 }
             }
         }, {
+            name: "Buys",
             data: [
                 { x: 142214400000, y: 10, z: 640000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000, pps: 6.4 },
                 { x: 142214400000, y: 10, z: 640000, name: 'KEOUGH TRACY S', relationship: "Officer", shares: 100000, pps: 6.4 },
@@ -122,7 +124,7 @@ var chartOptions = { chart: {
                 { x: 142352640000, y: 10, z: 149413.95, name: 'MYERS MARIE', relationship: "Officer", shares: 100000, pps: 9.33 },
                  { x: "2016-09-22", y: 6, z: 165693.3, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14.18 },
                  { x: 142558900000, y: 6, z: 165693.3, name: 'WEISLER DION J', relationship: "Director", shares: 100000, pps: 14.18 },
-                 { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 6.88 }  
+                 { x: 142599900000, y: 2, z: 114943.08, name: 'LORES ENRIQUE', relationship: "Other", shares: 100000, pps: 6.88 }
             ],
             marker: {
                 fillColor: {
