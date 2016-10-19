@@ -22,6 +22,26 @@ var chartOptions = { chart: {
             endOnTick: false
         },
 
+         tooltip: {
+            useHTML: true,
+            headerFormat: '<table>',
+            pointFormat: '<tr><th colspan="3"><h3>{point.country}</h3></th></tr>' +
+                '<tr><th>Date:</th><td>{point.x}g</td></tr>' +
+                '<tr><th>Insider Score:</th><td>{point.y}g</td></tr>' +
+                '<tr><th>Amount:</th><td>{point.z}</td></tr>',
+            footerFormat: '</table>',
+            followPointer: true
+        },
+
+         plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}'
+                }
+            }
+        },
+
         series: [{
             data: [
                 [9, 81, 63],
