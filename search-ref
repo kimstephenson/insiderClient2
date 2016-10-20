@@ -1,0 +1,116 @@
+SEARCHBAR
+
+import React from 'react'
+
+var SearchBar = React.createClass({
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
+  getInitialState: function() {
+    return {searchTerm: ''}
+  },
+  handleSearchTermChange: function(e) {
+    this.setState({searchTerm: e.target.value})
+  },
+  handleSubmit: function(e) {
+    e.preventDefault()
+    this.context.router.push('/search/' + this.state.searchTerm)
+  },
+  render: function() {
+    return (
+      <div>
+        <form className="Search" onSubmit={this.handleSubmit}>
+          <input className="searchBar" type="text" placeholder="Search" value={this.state.searchTerm} onChange={this.handleSearchTermChange}/>
+          <input className="searchBtn" type="submit" value="Submit"/>
+        </form>
+      </div>
+    )
+  }
+})
+
+export default SearchBar
+
+
+******************************
+
+SEARCH PAGE
+
+var SearchPage = React.createClass({
+  getInitialState: function() {
+    return{ results : [] }
+  },
+  componentWillMount: function() {
+    $.ajax({
+      url: "https://insiderapi.herokuapp.com/companies?search=" + this.props.params.searchTerm,
+      dataType: "json",
+      success: function(results) {
+        this.setState({results: results})
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this, status, err.toString())
+      }.bind(this)
+    })
+  },
+  componentWillReceiveProps: function(nextProps) {
+    $.ajax({
+      url: "https://insiderapi.herokuapp.com/companies?search=" + nextProps.params.searchTerm,
+      dataType: "json",
+      success: function(results) {
+        this.setState({results: results})
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this, status, err.toString())
+      }.bind(this)
+    })
+  },
+  render: function() {
+    return(
+      <div className="search-page">
+        <SearchBar/>
+        <SearchResults searchTerm={this.props.params.searchTerm} results={this.state.results}/>
+      </div>
+    )
+  }
+})
+
+
+
+*************************
+
+SEARCH RESULTS 
+
+var SearchResults = React.createClass({
+  render: function() {
+    return (
+      <div></div>
+  //     this.props.results.map(function(co) {
+  //       return(
+  //         <CompanyCard co={co} />
+  //       )
+  //     })
+    )
+  }
+})
+
+
+
+************************************
+
+COMPANY CARD
+
+import React from 'react'
+import '../../../css/card.css'
+
+var CompanyCard = React.createClass({
+  render: function() {
+    return (
+      <div key={this.props.co.id} className="card">
+        <a href={`/companies/${this.props.co.name}`}>{this.props.co.name}</a>
+        <p className="card">Total insiders: {this.props.co.insiders}</p>
+        <p>Monthly Transactions: {this.props.co.monthly_total}</p>
+      </div>
+    )
+  }
+})
+
+export default CompanyCard

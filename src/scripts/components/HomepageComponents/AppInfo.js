@@ -8,16 +8,16 @@ var InfoBar = React.createClass({
     return (
       <div className="info-bar">
         <div className="info">
-          <h2 className="number">6.5</h2>
-          <p className="mustache-header">Confidence Rating</p>
+          <h2 className="number">3052</h2>
+          <p className="mustache-header">Insider Trades</p>
         </div>
         <div className="info">
-          <h2 className="number">8</h2>
-          <p className="mustache-header">Insiders</p>
+          <h2 className="number">120M</h2>
+          <p className="mustache-header">Shares Traded</p>
         </div>
         <div className="info">
-          <h2 className="number">$1.2B</h2>
-          <p className="mustache-header">Total Traded This Quarter</p>
+          <h2 className="number">$12.14B</h2>
+          <p className="mustache-header">Value Traded</p>
         </div>
       </div>
     )

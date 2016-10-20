@@ -1,16 +1,15 @@
 import React from 'react'
-import CompanyCard from './CompanyCard'
+import SearchCard from './SearchCard'
 
-var SearchResults = React.createClass({
-  render: function() {
-    return (
-      this.props.results.map(function(co) {
-        return(
-          <CompanyCard co={co} />
-        )
-      })
-    )
-  }
-})
+const SearchResults = (props) => {
+  const searchCards = props.companies.map((company) => {
+    return <SearchCard key={company.id} 
+                       company={company} />
+  })
+
+  return (
+    <div className="search-results">{searchCards}</div>
+  )
+}
 
 export default SearchResults

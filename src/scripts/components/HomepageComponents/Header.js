@@ -1,4 +1,5 @@
 var React = require('react')
+import SearchBar from '../SearchComponents/SearchBar'
 import '../../../css/Header.css'
 
 var Header = React.createClass({
@@ -10,6 +11,7 @@ var Header = React.createClass({
         <div className="logo-title">Smarter Bear</div>
       </div>
 
+      <SearchBar />
       <div className="useractions">
         <ul>
           <li>Name</li>

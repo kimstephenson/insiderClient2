@@ -1,44 +1,40 @@
-var React = require('react')
-import Search from './Search'
+import React from 'react'
+import SearchBar from './SearchBar'
 import SearchResults from './SearchResults'
-import $ from 'jquery'
+import CardModal from './CardModal'
+import Request from 'superagent'
+import '../../../css/search.scss'
 
-var SearchPage = React.createClass({
-  getInitialState: function() {
-    return{ results : [] }
-  },
-  componentWillMount: function() {
-    $.ajax({
-      url: "https://insiderapi.herokuapp.com/companies?search=" + this.props.params.searchTerm,
-      dataType: "json",
-      success: function(results) {
-        this.setState({results: results})
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this, status, err.toString())
-      }.bind(this)
+class SearchPage extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      companies: [],
+      selectedGif: null,
+      modalIsOpen: false
+    }
+  }
+
+  //this.handleTermChange = this.handleTermChange.bind(this)
+
+  handleTermChange = (term) => {
+    const url = `https://insiderapi.herokuapp.com/companies?search=${term}`
+
+    Request.get(url, (err, res) => {
+      this.setState({ companies: res.body })
+      console.log(res.body)
     })
-  },
-  componentWillReceiveProps: function(nextProps) {
-    $.ajax({
-      url: "https://insiderapi.herokuapp.com/companies?search=" + nextProps.params.searchTerm,
-      dataType: "json",
-      success: function(results) {
-        this.setState({results: results})
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this, status, err.toString())
-      }.bind(this)
-    })
-  },
-  render: function() {
-    return(
-      <div className="SearchPage">
-        <Search/>
-        <SearchResults searchTerm={this.props.params.searchTerm} results={this.state.results}/>
+  }
+
+  render() {
+    return (
+      <div className="search-page">
+        <SearchBar onTermChange={this.handleTermChange} />
+        <SearchResults companies={this.state.companies} />
       </div>
     )
   }
-})
+}
 
 export default SearchPage

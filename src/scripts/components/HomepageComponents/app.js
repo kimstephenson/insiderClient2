@@ -2,7 +2,7 @@ var React = require('react');
 import '../../../css/app.css'
 import Header from './Header'
 import AppInfo from './AppInfo'
-import Search from '../SearchComponents/Search'
+import SearchBar from '../SearchComponents/SearchBar'
 import MainChart from './MainChart'
 
 
@@ -15,7 +15,7 @@ var App = React.createClass({
             <Header/>
           </div>
           <div className="search">
-            <Search/>
+            <SearchBar/>
           </div>
           <div className="cluster-chart">
             <MainChart/>
