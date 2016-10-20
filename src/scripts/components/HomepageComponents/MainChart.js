@@ -115,6 +115,11 @@ var chartOptions = {
         }],
         data: this.state.companyData
     }],
+    // tooltip: {
+    //     useHTML: true,
+    //     headerFormat: '<table',
+    //     footerFormat: '</table>'
+    // },
     title: {
         useHTML: true,
 
