@@ -3,8 +3,6 @@ import '../../../css/infobar.scss'
 
 var InfoBar = React.createClass({
   render: function(){
-  console.log("company details:")
-  console.log(this.props)
     return (
       <div className="info-bar">
         <div className="info">
