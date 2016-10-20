@@ -57,3 +57,24 @@ body {
   margin-left: 40px;
   margin-right: 40px;
 }
+
+.highcharts-data-labels .highcharts-series-0 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.searchBtn {
+  display: none;
+}
+
+.searchBar {
+  height: 30px;
+  border-radius: 2px;
+  width: 180px;
+  border:none;
+  font-size: 12px;
+  padding-left: 18px;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,0.4);
+  outline: none;
+  letter-spacing: .3px;
+  background-color: #4E5E6E;
+}

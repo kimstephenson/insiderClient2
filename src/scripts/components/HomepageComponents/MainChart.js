@@ -137,28 +137,41 @@ for (company in data) {
         }
     }
 
-var chartOptions = { series: [{
-            type: 'treemap',
-            layoutAlgorithm: 'squarified',
-            allowDrillToNode: true,
-            animationLimit: 1000,
+var chartOptions = {
+
+    credits: {
+        enabled: false
+    },
+    series: [{
+        type: 'treemap',
+        layoutAlgorithm: 'squarified',
+        allowDrillToNode: true,
+        animationLimit: 1000,
+        dataLabels: {
+            enabled: false
+        },
+        levelIsConstant: false,
+        levels: [{
+            level: 1,
             dataLabels: {
-                enabled: false
+                useHTML: true,
+                enabled: true,
+                style: {
+                    fontSize: '20px',
+                    fontWeight: 'bold'
+                }
             },
-            levelIsConstant: false,
-            levels: [{
-                level: 1,
-                dataLabels: {
-                    enabled: true
-                },
-                borderWidth: 3
-            }],
-            data: points
+            borderWidth: 0
         }],
-        title: {
-            text: 'Hot Insider Trades In Your Area'
+        data: points
+    }],
+    title: {
+        text: 'Top Insider Trades',
+        style: {
+          color: 'rgba(255, 255, 255, 1)'
         }
-      }
+    }
+}
 
 var MainChart = React.createClass({
   render: function() {

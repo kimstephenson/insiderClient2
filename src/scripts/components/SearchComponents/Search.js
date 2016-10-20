@@ -18,8 +18,8 @@ var Search = React.createClass({
     return (
       <div>
         <form className="Search" onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Search" value={this.state.searchTerm} onChange={this.handleSearchTermChange}/>
-          <input type="submit" value="Submit"/>
+          <input className="searchBar" type="text" placeholder="Search" value={this.state.searchTerm} onChange={this.handleSearchTermChange}/>
+          <input className="searchBtn" type="submit" value="Submit"/>
         </form>
       </div>
     )
