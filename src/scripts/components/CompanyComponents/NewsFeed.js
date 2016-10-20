@@ -10,7 +10,7 @@ const NewsFeed = React.createClass({
         <div className="news-header">
           <h2>{this.props.companyName.replace(/\b[a-z]/g,function(f){
                   return f.toUpperCase()
-                })} News Last Quarter
+                })} News
           </h2>
         </div>
 
