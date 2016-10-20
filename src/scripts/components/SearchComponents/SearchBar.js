@@ -21,12 +21,8 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-<<<<<<< Updated upstream
-        <input className="searchBar" placeholder='Search company or ticker' onChange={event => this.onInputChange(event.target.value)} />
-=======
         <input className="searchBar" placeholder='Search company or ticker' onChange={this.handleSearchTermEvent}  />
         <Link to='/search' className='searchBtn'> Browse </Link>
->>>>>>> Stashed changes
       </div>
     )
   }
