@@ -17,12 +17,12 @@ body {
 }
 
 .logo {
-  width:30px;
+  width:25px;
   padding-left: 15px;
 }
 
 .logo-title {
-  padding-top: 8px;
+  padding-top: 4px;
   color:#fff;
   display: inline-block;
   font-family: 'Roboto Slab', serif;
@@ -31,17 +31,35 @@ body {
   letter-spacing: .08em;
 }
 
-.container {
+.container, .header {
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+}
+
+.info {
+  position: relative;
+  z-index: 200;
 }
 
 .cluster-chart {
-  width: 100%;
-  background-color: #3B4756;
-  margin-bottom: 2px;
+  margin-top: 28px;
+  z-index: 1;
+  margin-left: 40px;
+  margin-right: 40px;
 }
+
+.info-bar-bg {
+  background-color: #3B4756;
+  height: 185px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+/**//**//**//**//**//**//**//**//**//**//**/
+.main-chart {
+  background-color: #3B4756;
+}
+/**//**//**//**//**//**//**//**//**//**//**/
 
 .highcharts-background {
   fill: #3B4756;
@@ -100,7 +118,7 @@ body {
   outline: none;
   letter-spacing: .4px;
   background-color: #4E5E6E;
-  opacity: .7;
+  opacity: .6;
   margin-right: 20px;
   font-family: 'Roboto', serif;
 }
@@ -113,12 +131,13 @@ input {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  padding-top: 30px;
+  padding-top: 26px;
   background-color: #3B4756;
   margin-bottom: 0;
   margin-top: 20px;
   letter-spacing: .07em;
   margin-bottom: 20px;
+  font-size: 25px
 }
 
 .treemap-company-name {
@@ -132,6 +151,3 @@ input {
   padding-left: 30px;
 }
 
-.info {
-  padding-top: 8px
-}

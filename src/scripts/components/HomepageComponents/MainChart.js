@@ -9,7 +9,7 @@ var MainChart = React.createClass({
         return {companyData: []}
     },
     componentWillMount: function() {
-        var colors = ['#96ECC4', '#0782B3', '#FFC247', '#F46F4B', '#6B539D'];
+        var colors = ['#92C3FF', '#9DACFF', '#FFA189', '#FFD168', '#7AE4B1'];
         var i = 0;
         $.ajax({
             url: "https://insiderapi.herokuapp.com/companies",
@@ -84,7 +84,8 @@ var chartOptions = {
     chart: {
         paddingTop: 15,
         marginLeft: 25,
-        marginRight: 25
+        marginRight: 25,
+        height: 450,
     },
     credits: {
         enabled: false
