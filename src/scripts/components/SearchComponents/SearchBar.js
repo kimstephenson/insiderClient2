@@ -1,15 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { term: ''}
+    this.state = { searchTerm: ''}
   }
 
   onInputChange(term) {
     this.setState({term})
     this.props.onTermChange(term)
   }
+
+  onInputSubmit(e) {
+    this.props.onSubmit(e)
+  }
+
+
+
   render() {
     return (
       <div>
