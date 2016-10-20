@@ -42,10 +42,6 @@ var TopInsiders = React.createClass({
     )
   })
 
-
-// total_trade_value
-// total_trades
-
     return (
       <div>
         <h1>Top Insiders</h1>
