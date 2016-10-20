@@ -1,8 +1,8 @@
 import React from 'react'
 import Request from 'superagent'
 import _ from 'lodash'
-import '../../css/news.css'
-import config from '../../../config.json'
+import '../../../css/news.css'
+import config from '../../../../config.json'
 
 const News = React.createClass({
   getInitialState: function() {
@@ -25,27 +25,27 @@ const News = React.createClass({
   render: function() {
     var articles = _.map(this.state.articles, (article) => {
       return (
-        <li>
+        <li key={article.thread.uuid}>
           <a href={article.thread.url}>
             <img className='news-img' src={article.thread.main_image} alt='main-img' />
           </a>
+
+          <div className="news-text">
+
           <h3>
             <a href={article.thread.url} >{article.title}</a>
           </h3>
+
           <p><span>{article.published}</span></p>
           <p>{article.text.split('.').slice(0,2).join(' ')}</p>
+          </div>
         </li>
       )
     })
 
     return (
       <div className="news-story">
-        <p>most recent week's news...</p>
-        <h3>{ this.props.companyName.replace(/\b[a-z]/g,function(f){
-                return f.toUpperCase()
-              })
-            }
-        </h3>
+
         <ul>{articles}</ul>
       </div>
     )

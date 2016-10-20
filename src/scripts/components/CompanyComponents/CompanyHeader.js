@@ -1,4 +1,5 @@
 var React = require('react')
+import '../../../css/CompanyHeader.css'
 
 var CompanyHeader = React.createClass({
   render: function() {
