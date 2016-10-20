@@ -1,6 +1,5 @@
 var React = require('react');
 import '../../../css/app.css'
-import Header from './Header'
 import AppInfo from './AppInfo'
 import SearchBar from '../SearchComponents/SearchBar'
 import MainChart from './MainChart'
@@ -12,9 +11,6 @@ var App = React.createClass({
     return(
       <div className="App">
         <div className="container">
-          <div className="header">
-            <Header/>
-          </div>
           <div className="cluster-chart">
             <MainChart/>
           </div>
