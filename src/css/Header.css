@@ -10,18 +10,18 @@
 }
 
 .header {
-  padding-top: 10px;
-  padding-bottom: 10px;
   vertical-align: center;
 }
 
 .HeaderBar {
-  margin-top: 5%;
   display: flex;
   width: 900px;
   /* flex box : allows boxes and layout easier */
   justify-content: space-between;
   align-items: center;
+  background-color: #2D3D48;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .HeaderBar ul li {

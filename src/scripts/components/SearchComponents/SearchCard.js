@@ -3,7 +3,7 @@ import React from 'react'
 const SearchCard = ({company, onCardSelect}) => {
   return (
     <a href={`/companies/${company.name}`}>
-      <div className="search-card" onClick={() => onCardSelect(company)}>
+      <div className="search-card" >
         <div className="logo">
           <img src={'http://fakeimg.pl/300'} />
         </div>
@@ -15,7 +15,8 @@ const SearchCard = ({company, onCardSelect}) => {
           <p><strong>{company.insiders}</strong> insiders</p>
           <p><strong>{company.confidence}</strong> confidence rating</p>
         </div>
-      </div></a>
+      </div>
+    </a>
   )
 }
 
