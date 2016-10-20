@@ -9,6 +9,8 @@ var MainChart = React.createClass({
         return {companyData: []}
     },
     componentWillMount: function() {
+        var colors = ['#96ECC4', '#0782B3', '#FFC247', '#F46F4B', '#6B539D'];
+        var i = 0;
         $.ajax({
             url: "https://insiderapi.herokuapp.com/companies",
             dataType: "json",
@@ -61,6 +63,8 @@ var MainChart = React.createClass({
                             }
                         }
                         companyP.value = companyVal;
+                        companyP.color = colors[i]
+                        i++
                         points.push(companyP);
                         companyI = companyI + 1;
                     }
@@ -77,7 +81,11 @@ var MainChart = React.createClass({
 
 
 var chartOptions = {
-
+    chart: {
+        paddingTop: 15,
+        marginLeft: 25,
+        marginRight: 25
+    },
     credits: {
         enabled: false
     },
@@ -93,6 +101,9 @@ var chartOptions = {
         levels: [{
             level: 1,
             dataLabels: {
+                formatter: function () {
+                    return `<div class="treemap-company-name">${this.point.name}</div>`
+                },
                 useHTML: true,
                 enabled: true,
                 style: {
@@ -105,7 +116,9 @@ var chartOptions = {
         data: this.state.companyData
     }],
     title: {
-        text: 'Top Insider Trades',
+        useHTML: true,
+
+        text: '<div class="mainchart-header">Top Insider Trades</div>',
         style: {
           color: 'rgba(255, 255, 255, 1)'
         }

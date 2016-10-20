@@ -5,8 +5,11 @@ var Header = React.createClass({
   render: function() {
     return(
     <div className="HeaderBar">
-      <img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="img-responsive"/>
-      <div className="logo">Smarter Bear</div>
+      <div>
+        <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
+        <div className="logo-title">Smarter Bear</div>
+      </div>
+
       <div className="useractions">
         <ul>
           <li>Name</li>

@@ -9,6 +9,12 @@
   width: 70%;
 }
 
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: center;
+}
+
 .HeaderBar {
   display: flex;
   width: 900px;
