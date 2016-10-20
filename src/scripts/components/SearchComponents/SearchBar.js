@@ -12,7 +12,7 @@ class SearchBar extends React.Component {
   }
   render() {
     return (
-      <div className="search">
+      <div className="searchBar">
         <input placeholder='Search by company name or ticker' className="input" onChange={event => this.onInputChange(event.target.value)} />
       </div>
     )
