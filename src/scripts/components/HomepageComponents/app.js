@@ -14,9 +14,6 @@ var App = React.createClass({
           <div className="header">
             <Header/>
           </div>
-          <div className="search">
-            <SearchBar/>
-          </div>
           <div className="cluster-chart">
             <MainChart/>
           </div>

@@ -12,12 +12,6 @@ var Header = React.createClass({
       </div>
 
       <SearchBar />
-      <div className="useractions">
-        <ul>
-          <li>Name</li>
-          <li>Logout</li>
-        </ul>
-      </div>
     </div>
 
     )
