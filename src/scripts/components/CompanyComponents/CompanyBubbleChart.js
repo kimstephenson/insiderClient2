@@ -8,15 +8,31 @@ var CompanyBubbleChart = React.createClass({
 render: function() {
 console.log("sells:")
 console.log(this.props.sells.sells)
-  return(<ReactHighcharts config={
-    { chart: {
+  return(<ReactHighcharts config={{
+    chart: {
         type: 'bubble',
         plotBorderWidth: 0,
-        zoomType: 'xy'
+        zoomType: 'xy',
+        spacingRight:100,
+        marginLeft: 150,
+        marginBottom: 80
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'top',
+        layout: 'vertical',
+        x: 0,
+        y: 100,
+        useHTML: true,
+        itemMarginBottom: 10,
+        itemStyle: {
+            color: 'rgba(255, 255, 255, .4)'
+        }
     },
 
     title: {
-        text: '<div class="chart-subtitle">Cluster Trades</div>',
+        text: '<div class="chart-subtitle">Last Quarter Trades</div>',
         useHTML: true
     },
 
@@ -50,6 +66,7 @@ console.log(this.props.sells.sells)
         endOnTick: false,
         allowDecimals: false,
       labels: {
+
         format: '{value}',
         step: 1,
         style: {
@@ -67,7 +84,13 @@ console.log(this.props.sells.sells)
       plotLines: [{
         color: 'black'
       }],
-      title: 'Insider Score'
+      title: {
+        text: 'Insider Score',
+        rotation: 270,
+        style: {
+          color:'rgba(255, 255, 255, .4)',
+        }
+        }
     },
 
      tooltip: {
@@ -91,15 +114,11 @@ console.log(this.props.sells.sells)
             fillColor: '#FF8669'
         }
     }, {
+        color: 'transparent',
         name: "Buys",
         data: this.props.buys.buys,
         marker: {
-            fillColor: {
-                stops: [
-                    [0, 'rgba(255,255,255,0.4)'],
-                    [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
-                ]
-            }
+            fillColor: '#96ECC4'
         }
     }]
  }

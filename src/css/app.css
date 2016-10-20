@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 html {
   height: 100%;
@@ -42,3 +42,17 @@ body {
     fill: #fff;
 }
 
+.chart-subtitle {
+  text-transform: uppercase;
+  color:#fff;
+  font-family: 'Roboto', serif;
+  font-weight: lighter;
+  letter-spacing: .15em;
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+.companyShow {
+  margin-left: 40px;
+  margin-right: 40px;
+}
