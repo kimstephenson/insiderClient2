@@ -4,7 +4,6 @@ import CompanyHeader from './CompanyHeader'
 import NewsFeed from './NewsFeed'
 import InfoBar from './InfoBar'
 import $ from 'jquery'
-import Header from '../HomepageComponents/Header'
 
 var CompanyShow = React.createClass({
   getInitialState: function() {
@@ -32,17 +31,12 @@ var CompanyShow = React.createClass({
   render: function() {
     return(
       <div>
-        <div className="header">
-          <Header/>
-        </div>
-
         <div className="companyShow">
           <CompanyHeader companyName={this.state.companyName}/>
           <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
           <InfoBar confidenceRating={this.state.confidenceRating} insiders={this.state.insiders} totalTrans={this.state.totalTrans}/>
           <NewsFeed companyName={this.props.params.companyName} />
         </div>
-
       </div>
     )
   }
