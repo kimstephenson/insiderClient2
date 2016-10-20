@@ -11,17 +11,20 @@ render: function() {
   return(<ReactHighcharts config={
     { chart: {
         type: 'bubble',
-        plotBorderWidth: 1,
+        plotBorderWidth: 0,
         zoomType: 'xy'
-        // backgroundColor: "#32424B"
     },
 
     title: {
-        text: 'Transactions'
+        text: '<div class="chart-subtitle">Cluster Trades</div>',
+        useHTML: true
     },
 
     xAxis: {
-        gridLineWidth: 1,
+        lineWidth: 0,
+        minorGridLineWidth: 0,
+        lineColor: 'transparent',
+        gridLineWidth: 0,
         type: 'datetime',
         dateTimeLabelFormats: {
             day: '%e. %b'
@@ -31,8 +34,8 @@ render: function() {
         },
         labels: {
             style: {
-            color: 'rgba(0, 0, 0, 0.50)',
-            fontSize: '12px'
+            color: 'rgba(255, 255, 255, .4)',
+            fontSize: '8px'
             },
             formatter: function() {
                 return Highcharts.dateFormat('%m/%d', this.value)
@@ -42,6 +45,7 @@ render: function() {
     },
 
     yAxis: {
+        gridLineWidth: 0,
         startOnTick: false,
         endOnTick: false,
         allowDecimals: false,
@@ -49,8 +53,8 @@ render: function() {
         format: '{value}',
         step: 1,
         style: {
-          color: 'rgba(0, 0, 0, 0.50)',
-          fontSize: '12px'
+          color: 'rgba(255, 255, 255, .4)',
+          fontSize: '8px'
         }
       },
       min: 0,
@@ -80,25 +84,19 @@ render: function() {
         followPointer: true
     },
     series: [{
+        color: 'transparent',
         name: "Sells",
         data: this.props.sells.sells,
         marker: {
-            fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
-                stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
-                    [1, Highcharts.Color(Highcharts.getOptions().colors[8]).setOpacity(0.5).get('rgba')]
-                ]
-            }
+            fillColor: '#FF8669'
         }
     }, {
         name: "Buys",
         data: this.props.buys.buys,
         marker: {
             fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
                 stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
+                    [0, 'rgba(255,255,255,0.4)'],
                     [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
                 ]
             }
