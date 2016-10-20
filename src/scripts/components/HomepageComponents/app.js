@@ -3,6 +3,7 @@ import '../../../css/app.css'
 import AppInfo from './AppInfo'
 import SearchBar from '../SearchComponents/SearchBar'
 import MainChart from './MainChart'
+import TopInsiders from './TopInsiders'
 
 
 var App = React.createClass({
@@ -13,9 +14,12 @@ var App = React.createClass({
           <div className="cluster-chart">
             <MainChart/>
           </div>
-
           <div className="info">
             <AppInfo/>
+          </div>
+
+          <div className="top-insiders">
+            <TopInsiders/>
           </div>
           
           <div className="footer">
