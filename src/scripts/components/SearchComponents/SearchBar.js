@@ -1,29 +1,22 @@
 import React from 'react'
 
-var SearchBar = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.func.isRequired
-  },
-  getInitialState: function() {
-    return {searchTerm: ''}
-  },
-  handleSearchTermChange: function(e) {
-    this.setState({searchTerm: e.target.value})
-  },
-  handleSubmit: function(e) {
-    e.preventDefault()
-    this.context.router.push('/search/' + this.state.searchTerm)
-  },
-  render: function() {
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { term: ''}
+  }
+
+  onInputChange(term) {
+    this.setState({term})
+    this.props.onTermChange(term)
+  }
+  render() {
     return (
-      <div>
-        <form className="Search" onSubmit={this.handleSubmit}>
-          <input className="searchBar" type="text" placeholder="Search" value={this.state.searchTerm} onChange={this.handleSearchTermChange}/>
-          <input className="searchBtn" type="submit" value="Submit"/>
-        </form>
+      <div className="search">
+        <input className="input" onChange={event => this.onInputChange(event.target.value)} />
       </div>
     )
   }
-})
+}
 
 export default SearchBar
