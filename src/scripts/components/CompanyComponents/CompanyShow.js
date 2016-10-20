@@ -15,7 +15,6 @@ var CompanyShow = React.createClass({
       url: "https://insiderapi.herokuapp.com/companies/" + this.props.params.companyName,
       dataType: "json",
       success: function(data) {
-        console.log(data)
         this.setState({data: data,
            confidenceRating: data[0].confidence_rating,
                  totalTrans: data[3].transactions_total,
