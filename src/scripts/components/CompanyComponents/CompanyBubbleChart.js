@@ -15,7 +15,7 @@ console.log(this.props.sells.sells)
         zoomType: 'xy',
         spacingRight:100,
         marginLeft: 150,
-        marginBottom: 80
+        marginBottom: 80,
     },
 
     legend: {
@@ -32,8 +32,12 @@ console.log(this.props.sells.sells)
     },
 
     title: {
-        text: '<div class="chart-subtitle">Last Quarter Trades</div>',
+        text: '<div class="chart-subtitle">Trades</div>',
         useHTML: true
+    },
+
+    credits: {
+        enabled: false
     },
 
     xAxis: {
