@@ -13,15 +13,14 @@ console.log(this.props.sells.sells)
         type: 'bubble',
         plotBorderWidth: 0,
         zoomType: 'xy'
-        // backgroundColor: "#32424B"
     },
 
     title: {
-        text: 'Transactions'
+        text: '<div class="chart-subtitle">Cluster Trades</div>',
+        useHTML: true
     },
 
     xAxis: {
-
         lineWidth: 0,
         minorGridLineWidth: 0,
         lineColor: 'transparent',
@@ -85,25 +84,19 @@ console.log(this.props.sells.sells)
         followPointer: true
     },
     series: [{
-        color: '#FF8669',
+        color: 'transparent',
         name: "Sells",
         data: this.props.sells.sells,
         marker: {
-            fillColor: {
-                stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
-                    [1, Highcharts.Color(Highcharts.getOptions().colors[8]).setOpacity(0.5).get('rgba')]
-                ]
-            }
+            fillColor: '#FF8669'
         }
     }, {
         name: "Buys",
         data: this.props.buys.buys,
         marker: {
             fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
                 stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
+                    [0, 'rgba(255,255,255,0.4)'],
                     [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
                 ]
             }
