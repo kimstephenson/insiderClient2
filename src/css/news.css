@@ -1,4 +1,30 @@
-.news-img {
-  width: 100px;
-  height: 100px;
+.news-bg {
+  background-color: #F8F9F5;
+  width: 100%;
+  height: 1000px;
 }
+
+.news-header {
+  text-align: center;
+}
+
+.news-story {
+  width: 800px;
+  /*margin: 0 auto;*/
+  margin-left: 220px;
+}
+
+.news-text {
+  width: 45%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.news-img {
+/*  height: 100px;*/
+  display: inline-block;
+  width:15%;
+  vertical-align: top;
+  margin-right: 5%
+}
+
