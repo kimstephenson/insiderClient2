@@ -22,6 +22,7 @@ var MainChart = React.createClass({
                     companyI = 0,
                     insiderP,
                     insiderI,
+                    insiderVal,
                     tradeP,
                     tradeI,
                     company,
@@ -39,6 +40,7 @@ var MainChart = React.createClass({
                         insiderI = 0;
                         for (insider in data[company]) {
                             if (data[company].hasOwnProperty(insider)) {
+                                insiderVal = 0;
                                 insiderP = {
                                     id: companyP.id + '_' + insiderI,
                                     name: insider,
@@ -54,11 +56,13 @@ var MainChart = React.createClass({
                                             parent: insiderP.id,
                                             value: Math.round(+data[company][insider][trade])
                                         };
+                                        insiderVal += tradeP.value;
                                         companyVal += tradeP.value;
                                         points.push(tradeP);
                                         tradeI = tradeI + 1;
                                     }
                                 }
+                                insiderP.value = insiderVal;
                                 insiderI = insiderI + 1;
                             }
                         }
@@ -89,6 +93,12 @@ var chartOptions = {
     },
     credits: {
         enabled: false
+    },
+    tooltip: {
+        useHTML: true,
+        headerFormat: '<table>',
+        pointFormat: "<tr><th>Total value traded:</th><td>${point.value}</td></tr>",
+        footerFormat: '</table>'
     },
     series: [{
         type: 'treemap',
