@@ -87,16 +87,11 @@ import $ from 'jquery'
         companyI = 0,
         insiderP,
         insiderI,
-        causeP,
-        causeI,
+        tradeP,
+        tradeI,
         company,
         insider,
-        cause,
-        causeName = {
-            'Communicable & other Group I': 'Communicable diseases',
-            'Noncommunicable diseases': 'Non-communicable diseases',
-            'Injuries': 'Injuries'
-        };
+        trade;
 
 for (company in data) {
         if (data.hasOwnProperty(company)) {
@@ -115,18 +110,18 @@ for (company in data) {
                         parent: companyP.id
                     };
                     points.push(insiderP);
-                    causeI = 0;
-                    for (cause in data[company][insider]) {
-                        if (data[company][insider].hasOwnProperty(cause)) {
-                            causeP = {
-                                id: insiderP.id + '_' + causeI,
-                                name: cause,
+                    tradeI = 0;
+                    for (trade in data[company][insider]) {
+                        if (data[company][insider].hasOwnProperty(trade)) {
+                            tradeP = {
+                                id: insiderP.id + '_' + tradeI,
+                                name: trade,
                                 parent: insiderP.id,
-                                value: Math.round(+data[company][insider][cause])
+                                value: Math.round(+data[company][insider][trade])
                             };
-                            companyVal += causeP.value;
-                            points.push(causeP);
-                            causeI = causeI + 1;
+                            companyVal += tradeP.value;
+                            points.push(tradeP);
+                            tradeI = tradeI + 1;
                         }
                     }
                     insiderI = insiderI + 1;
@@ -163,16 +158,69 @@ var chartOptions = { series: [{
 
 var MainChart = React.createClass({
     getInitialState: function() {
-        return {data: []}
+        return {companyData: []}
     },
     componentWillMount: function() {
         $.ajax({
             url: "https://insiderapi.herokuapp.com/companies",
             dataType: "json",
             success: function(data) {
-                //create data set using for loop above
-                var companyData = data
-                console.log(companyData)
+            //     var data = data,
+            //         points = [],
+            //         companyP,
+            //         companyVal,
+            //         companyI = 0,
+            //         insiderP,
+            //         insiderI,
+            //         tradeP,
+            //         tradeI,
+            //         company,
+            //         insider,
+            //         trade;
+
+            // for (company in data) {
+            //         if (data.hasOwnProperty(company)) {
+            //             companyVal = 0;
+            //             companyP = {
+            //                 id: 'id_' + companyI,
+            //                 name: company,
+            //                 color: Highcharts.getOptions().colors[companyI]
+            //             };
+            //             insiderI = 0;
+            //             for (insider in data[company]) {
+            //                 if (data[company].hasOwnProperty(insider)) {
+            //                     insiderP = {
+            //                         id: companyP.id + '_' + insiderI,
+            //                         name: insider,
+            //                         parent: companyP.id
+            //                     };
+            //                     points.push(insiderP);
+            //                     tradeI = 0;
+            //                     for (trade in data[company][insider]) {
+            //                         if (data[company][insider].hasOwnProperty(trade)) {
+            //                             tradeP = {
+            //                                 id: insiderP.id + '_' + tradeI,
+            //                                 name: trade,
+            //                                 parent: insiderP.id,
+            //                                 value: Math.round(+data[company][insider][trade])
+            //                             };
+            //                             companyVal += tradeP.value;
+            //                             points.push(tradeP);
+            //                             tradeI = tradeI + 1;
+            //                         }
+            //                     }
+            //                     insiderI = insiderI + 1;
+            //                 }
+            //             }
+            //             companyP.value = companyVal;
+            //             points.push(companyP);
+            //             companyI = companyI + 1;
+            //         }
+            //     }
+
+            // this.setState({companyData: points})
+
+
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this, status, err.toString())
