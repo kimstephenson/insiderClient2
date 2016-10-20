@@ -38,7 +38,7 @@ body {
 
 .info {
   position: relative;
-  z-index: 200;
+/*  z-index: 200;*/
 }
 
 .cluster-chart {
@@ -53,8 +53,12 @@ body {
   height: 185px;
   margin-left: 40px;
   margin-right: 40px;
-
 }
+
+.info-bar-bg-companies-pg {
+  background-color: #3B4756;
+}
+
 /**//**//**//**//**//**//**//**//**//**//**/
 .main-chart {
   background-color: #3B4756;

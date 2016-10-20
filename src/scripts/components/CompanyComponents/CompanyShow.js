@@ -34,7 +34,9 @@ var CompanyShow = React.createClass({
         <div className="companyShow">
           <CompanyHeader companyName={this.state.companyName}/>
           <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
+        <div className="info-bar-bg-companies-pg">
           <InfoBar confidenceRating={this.state.confidenceRating} insiders={this.state.insiders} totalTrans={this.state.totalTrans}/>
+        </div>
           <NewsFeed companyName={this.props.params.companyName} />
         </div>
       </div>
