@@ -29,15 +29,15 @@ var TopInsiders = React.createClass({
     return(
       <li className="insider-card" key={i}>
         <div>
+          <div className="logo">
+            <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
+          </div>
           <div className="stats">
-            <div className="logo">
-              <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
-            </div>
             <h2>{insider.name}</h2>
-            <p><strong>Position: </strong>
-            {insider.position}</p>
-            <p><strong>Trades this quarter: </strong>{insider.total_trades}</p>
-            <p><strong>Total value this quarter: </strong>{insider.total_trade_value}</p>
+            <p>Company: <strong>{insider.company}</strong></p>
+            <p>Position: <strong>{insider.position}</strong></p>
+            <p>Trades this quarter: <strong>{insider.total_trades}</strong></p>
+            <p>Total value this quarter: <strong>{insider.total_trade_value}</strong></p>
           </div>
         </div>
       </li>

@@ -2,12 +2,13 @@
   color: #fff;
   background-color: #3B4756;
   font-size: 22px;
-  margin: 3em auto;
-  width: 95%;
+  text-align: center;
+  margin-left: 35px;
+  margin-right: 35px;
+  /*width: 95%;*/
 }
 
 .top-insiders h1 {
-  text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   padding-top: 26px;
@@ -21,21 +22,27 @@
   box-shadow: 2px 2px 4px 0 #ccc;
   box-sizing: border-box;
   display: inline-block;
+  text-align: left;
   margin: 0 1em 1.5em;
   padding: 1em;
+  padding-right: 35px;
   width: 100%;
   height: 20%;
   background-color: #fff;
   color: #33424D;
 }
-
+.insider-card li {
+  padding-left: 0;
+}
 .logo img {
+  background-color: #ccc;
   display: inline-block;
   padding: 1em;
-  height: 30%;
+  height: 150px;
+  width: 130px;
   float: left;
 }
 .stats {
-  /*padding-left: 5%;*/
-  /*display: inline-block;*/
+  padding-left: 5%;
+  display: inline-block;
 }
