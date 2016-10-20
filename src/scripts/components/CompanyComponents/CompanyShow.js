@@ -30,7 +30,7 @@ var CompanyShow = React.createClass({
   },
   render: function() {
     return(
-      <div>
+
         <div className="companyShow">
           <CompanyHeader companyName={this.state.companyName}/>
           <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
@@ -39,7 +39,7 @@ var CompanyShow = React.createClass({
         </div>
           <NewsFeed companyName={this.props.params.companyName} />
         </div>
-      </div>
+
     )
   }
 })
