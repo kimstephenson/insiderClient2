@@ -1,5 +1,5 @@
 var React = require('react')
-import Search from './Search'
+import SearchBar from './SearchBar'
 import SearchResults from './SearchResults'
 import $ from 'jquery'
 
@@ -34,7 +34,7 @@ var SearchPage = React.createClass({
   render: function() {
     return(
       <div className="SearchPage">
-        <Search/>
+        <SearchBar/>
         <SearchResults searchTerm={this.props.params.searchTerm} results={this.state.results}/>
       </div>
     )

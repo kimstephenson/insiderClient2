@@ -1,6 +1,6 @@
 import React from 'react'
 
-var Search = React.createClass({
+var SearchBar = React.createClass({
   contextTypes: {
     router: React.PropTypes.func.isRequired
   },
@@ -26,4 +26,4 @@ var Search = React.createClass({
   }
 })
 
-export default Search
+export default SearchBar
