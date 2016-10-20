@@ -1,6 +1,7 @@
 const React = require('react')
-import SearchBar from '../SearchComponents/SearchBar'
-import '../../../css/Header.css'
+const { Link } = require('react-router')
+import SearchBar from './scripts/components/SearchComponents/SearchBar'
+import './css/Header.css'
 
 var Header = React.createClass({
   getInitialState () {
@@ -15,10 +16,12 @@ var Header = React.createClass({
 
   render: function() {
     return(
-      <header className="HeaderBar">
+      <header className="HeaderBar header">
         <div>
-          <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
-          <div className="logo-title">Smarter Bear{this.state.searchTerm}</div>
+          <Link to='/' className='brand-link'>
+            <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
+            <div className="logo-title">Smarter Bear</div>
+          </Link>
         </div>
 
         <input value={this.state.searchTerm} className='search-term' type='text' placeholder='Search' onChange={this.handleSearchTermEvent} />
