@@ -30,6 +30,14 @@
   }
 }
 
+.gif-modal {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%)
+}
+
 @media only screen and (min-width: 400px) {
   .search-results {
     -moz-column-count: 2;
