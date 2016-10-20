@@ -34,6 +34,8 @@
 
 .search {
   float: right;
+  margin-right: 10%;
+  padding-bottom: 10%;
 }
 
 .CompanyHeader {
