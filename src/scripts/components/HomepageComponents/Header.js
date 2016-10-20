@@ -5,7 +5,7 @@ import '../../../css/Header.css'
 var Header = React.createClass({
   getInitialState () {
     return {
-      searchTerm: 'this is my search term'
+      searchTerm: 'Search company or ticker'
     }
   },
 
@@ -21,7 +21,7 @@ var Header = React.createClass({
           <div className="logo-title">Smarter Bear{this.state.searchTerm}</div>
         </div>
 
-        <input value={this.state.searchTerm} className='search-term' type='text' placeholder='Search' onChange={this.handleSearchTermEvent} />
+        <input value={this.state.searchTerm} className='searchBar' type='text' placeholder='Search' onChange={this.handleSearchTermEvent} />
       </header>
     )
   }

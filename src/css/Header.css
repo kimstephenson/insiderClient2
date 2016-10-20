@@ -15,13 +15,14 @@
 
 .HeaderBar {
   display: flex;
-  width: 100%;
   /* flex box : allows boxes and layout easier */
   justify-content: space-between;
   align-items: center;
   background-color: #2D3D48;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .HeaderBar ul li {
