@@ -77,7 +77,16 @@ body {
 }
 
 .searchBtn {
-  display: none;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 40px;
+  background-color: #333;
+  color: #fafafa;
+  border-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
 }
 
 .searchBar {
