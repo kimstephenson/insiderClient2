@@ -162,12 +162,17 @@ var chartOptions = { series: [{
       }
 
 var MainChart = React.createClass({
+    getInitialState: function() {
+        return {data: []}
+    },
     componentWillMount: function() {
         $.ajax({
             url: "https://insiderapi.herokuapp.com/companies",
             dataType: "json",
             success: function(data) {
                 //create data set using for loop above
+                var companyData = data
+                console.log(companyData)
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this, status, err.toString())
