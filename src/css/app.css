@@ -89,8 +89,15 @@ body {
   padding-left: 18px;
   box-shadow: inset 0px 0px 3px rgba(0,0,0,0.4);
   outline: none;
-  letter-spacing: .3px;
+  letter-spacing: .4px;
   background-color: #4E5E6E;
+  opacity: .7;
+  margin-right: 20px;
+  font-family: 'Roboto', serif;
+}
+
+input {
+  color: #fff;
 }
 
 .mainchart-header {
@@ -101,6 +108,8 @@ body {
   background-color: #3B4756;
   margin-bottom: 0;
   margin-top: 20px;
+  letter-spacing: .07em;
+  margin-bottom: 20px;
 }
 
 .treemap-company-name {
@@ -112,4 +121,8 @@ body {
 
 .highcharts-series-group {
   padding-left: 30px;
+}
+
+.info {
+  padding-top: 8px
 }
