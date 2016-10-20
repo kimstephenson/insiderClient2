@@ -2,8 +2,9 @@ import React from 'react'
 import SearchCard from './SearchCard'
 
 const SearchResults = (props) => {
-  const searchCards = props.gifs.map((image) => {
-    return <SearchCard key={image.id} gif={image} />
+  const searchCards = props.companies.map((company) => {
+    return <SearchCard key={company.id} 
+                       company={company} />
   })
 
   return (
