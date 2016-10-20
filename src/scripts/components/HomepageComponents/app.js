@@ -21,14 +21,11 @@ var App = React.createClass({
             <MainChart/>
           </div>
 
-          <div className="news">
-
-          </div>
-          <div className="transaction-list">
-
-          </div>
-          <div className="footer">
+          <div className="info">
             <AppInfo/>
+          </div>
+          
+          <div className="footer">
           </div>
 
         </div>
