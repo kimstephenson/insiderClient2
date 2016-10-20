@@ -1,18 +1,20 @@
-[
-  {"id":1,"name":"Yahoo Inc","ticker":"YHOO","shares_outstanding":"951,782,587","confidence":15,"transactions_total":"-$9,747,759.49","insiders":14},
-  {"id":2,"name":"Apple Inc","ticker":"AAPL","shares_outstanding":"5,388,443,000","confidence":32,"transactions_total":"$277,640,102.68","insiders":12},
-  {"id":3,"name":"Ruby Tuesday","ticker":"RT","shares_outstanding":"60,196,759","confidence":0,"transactions_total":"$0.00","insiders":15},
-  {"id":4,"name":"Google Inc","ticker":"GOOG","shares_outstanding":"687,273,797","confidence":5,"transactions_total":"-$2,454,581,920.08","insiders":16},
-  {"id":5,"name":"Hewlett Packard","ticker":"HPQ","shares_outstanding":"1,710,875,682","confidence":0,"transactions_total":"-$3,922,620.90","insiders":5},
-  {"id":6,"name":"Palo Alto Networks INC","ticker":"PANW","shares_outstanding":"90,850,457","confidence":16,"transactions_total":"-$77,056,785.71","insiders":7},
-  {"id":7,"name":"Facebook","ticker":"FB","shares_outstanding":"2,871,664,261","confidence":162,"transactions_total":"-$6,317,098,075.40","insiders":11},
-  {"id":8,"name":"FedEx","ticker":"FDX","shares_outstanding":"265,759,372","confidence":24,"transactions_total":"-$27,363,281.31","insiders":8},
-  {"id":9,"name":"Sabre Corp","ticker":"SABR","shares_outstanding":"278,069,943","confidence":26,"transactions_total":"-$66,455,317.06","insiders":12},
-  {"id":10,"name":"Splunk INC","ticker":"SPLK","shares_outstanding":"134,543,363","confidence":91,"transactions_total":"-$192,977,721.02","insiders":5},
-  {"id":11,"name":"Coupa Software INC","ticker":"COUP","shares_outstanding":"48,110,957","confidence":44,"transactions_total":"$449,715,480.00","insiders":7},
-  {"id":12,"name":"Comcast","ticker":"CMCSA","shares_outstanding":"2,411,825,686","confidence":32,"transactions_total":"-$80,014,772.91","insiders":13},
-  {"id":13,"name":"CBS","ticker":"CBS","shares_outstanding":"444,601,753","confidence":6,"transactions_total":"-$3,672,665.35","insiders":5},
-  {"id":14,"name":"International Business Machine","ticker":"IBM","shares_outstanding":"955,844,217","confidence":0,"transactions_total":"-$5,637,898.95","insiders":7},
-  {"id":15,"name":"Panera Bread Co","ticker":"PNRA","shares_outstanding":"23,646,377","confidence":0,"transactions_total":"-$1,630,044.93","insiders":12},
-  {"id":16,"name":"Acacia Communications Inc","ticker":"ACIA","shares_outstanding":"35,807,893","confidence":46,"transactions_total":"-$650,108,421.48","insiders":15}
-]
+{
+  "companies": [
+    {"id":1,"name":"Yahoo Inc","ticker":"YHOO","shares_outstanding":"951,782,587","confidence":15,"transactions_total":"-$9,747,759.49","insiders":14},
+    {"id":2,"name":"Apple Inc","ticker":"AAPL","shares_outstanding":"5,388,443,000","confidence":32,"transactions_total":"$277,640,102.68","insiders":12},
+    {"id":3,"name":"Ruby Tuesday","ticker":"RT","shares_outstanding":"60,196,759","confidence":0,"transactions_total":"$0.00","insiders":15},
+    {"id":4,"name":"Google Inc","ticker":"GOOG","shares_outstanding":"687,273,797","confidence":5,"transactions_total":"-$2,454,581,920.08","insiders":16},
+    {"id":5,"name":"Hewlett Packard","ticker":"HPQ","shares_outstanding":"1,710,875,682","confidence":0,"transactions_total":"-$3,922,620.90","insiders":5},
+    {"id":6,"name":"Palo Alto Networks INC","ticker":"PANW","shares_outstanding":"90,850,457","confidence":16,"transactions_total":"-$77,056,785.71","insiders":7},
+    {"id":7,"name":"Facebook","ticker":"FB","shares_outstanding":"2,871,664,261","confidence":162,"transactions_total":"-$6,317,098,075.40","insiders":11},
+    {"id":8,"name":"FedEx","ticker":"FDX","shares_outstanding":"265,759,372","confidence":24,"transactions_total":"-$27,363,281.31","insiders":8},
+    {"id":9,"name":"Sabre Corp","ticker":"SABR","shares_outstanding":"278,069,943","confidence":26,"transactions_total":"-$66,455,317.06","insiders":12},
+    {"id":10,"name":"Splunk INC","ticker":"SPLK","shares_outstanding":"134,543,363","confidence":91,"transactions_total":"-$192,977,721.02","insiders":5},
+    {"id":11,"name":"Coupa Software INC","ticker":"COUP","shares_outstanding":"48,110,957","confidence":44,"transactions_total":"$449,715,480.00","insiders":7},
+    {"id":12,"name":"Comcast","ticker":"CMCSA","shares_outstanding":"2,411,825,686","confidence":32,"transactions_total":"-$80,014,772.91","insiders":13},
+    {"id":13,"name":"CBS","ticker":"CBS","shares_outstanding":"444,601,753","confidence":6,"transactions_total":"-$3,672,665.35","insiders":5},
+    {"id":14,"name":"International Business Machine","ticker":"IBM","shares_outstanding":"955,844,217","confidence":0,"transactions_total":"-$5,637,898.95","insiders":7},
+    {"id":15,"name":"Panera Bread Co","ticker":"PNRA","shares_outstanding":"23,646,377","confidence":0,"transactions_total":"-$1,630,044.93","insiders":12},
+    {"id":16,"name":"Acacia Communications Inc","ticker":"ACIA","shares_outstanding":"35,807,893","confidence":46,"transactions_total":"-$650,108,421.48","insiders":15}
+  ]
+}
