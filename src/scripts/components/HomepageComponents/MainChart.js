@@ -2,6 +2,7 @@ var React = require('react')
 var ReactHighcharts = require('react-highcharts')
 var Highcharts = require('highcharts')
 var HighchartsTreemap = require('highcharts-treemap')(ReactHighcharts.Highcharts)
+import $ from 'jquery'
 
  var data = {
             'Facebook': {
@@ -161,9 +162,21 @@ var chartOptions = { series: [{
       }
 
 var MainChart = React.createClass({
-  render: function() {
-    return(<ReactHighcharts config={chartOptions} ref="chart"/>)
-  }
+    componentWillMount: function() {
+        $.ajax({
+            url: "https://insiderapi.herokuapp.com/companies",
+            dataType: "json",
+            success: function(data) {
+                //create data set using for loop above
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.error(this, status, err.toString())
+            }.bind(this)
+        })
+    },
+    render: function() {
+        return(<ReactHighcharts config={chartOptions} ref="chart"/>)
+      }
 })
 
 export default MainChart
