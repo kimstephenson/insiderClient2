@@ -10,8 +10,24 @@ class SearchPage extends React.Component {
     super(props)
 
     this.state = {
-      gifs: []
+      gifs: [],
+      selectedGif: null,
+      modalIsOpen: false
     }
+  }
+
+  openModal(gif) {
+    this.setState({
+      modalIsOpen: true,
+      selectedGif: gif
+    })
+  }
+
+  closeModal() {
+    this.setState({
+      modalIsOpen: false,
+      selectedGif: null
+    })
   }
 
   //this.handleTermChange = this.handleTermChange.bind(this)
@@ -30,6 +46,9 @@ class SearchPage extends React.Component {
       <div className="search-page">
         <SearchBar onTermChange={this.handleTermChange} />
         <SearchResults gifs={this.state.gifs} />
+        <GifModal modalIsOpen={this.state.modalIsOpen}
+                  selectedGif={this.state.selectedGif}
+                  onRequestClose= { () => this.closeModal() } />
       </div>
     )
   }
