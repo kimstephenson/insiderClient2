@@ -11,7 +11,7 @@ console.log(this.props.sells.sells)
   return(<ReactHighcharts config={
     { chart: {
         type: 'bubble',
-        plotBorderWidth: 1,
+        plotBorderWidth: 0,
         zoomType: 'xy'
         // backgroundColor: "#32424B"
     },
@@ -21,7 +21,11 @@ console.log(this.props.sells.sells)
     },
 
     xAxis: {
-        gridLineWidth: 1,
+
+        lineWidth: 0,
+        minorGridLineWidth: 0,
+        lineColor: 'transparent',
+        gridLineWidth: 0,
         type: 'datetime',
         dateTimeLabelFormats: {
             day: '%e. %b'
@@ -31,8 +35,8 @@ console.log(this.props.sells.sells)
         },
         labels: {
             style: {
-            color: 'rgba(0, 0, 0, 0.50)',
-            fontSize: '12px'
+            color: 'rgba(255, 255, 255, .4)',
+            fontSize: '8px'
             },
             formatter: function() {
                 return Highcharts.dateFormat('%m/%d', this.value)
@@ -42,6 +46,7 @@ console.log(this.props.sells.sells)
     },
 
     yAxis: {
+        gridLineWidth: 0,
         startOnTick: false,
         endOnTick: false,
         allowDecimals: false,
@@ -49,8 +54,8 @@ console.log(this.props.sells.sells)
         format: '{value}',
         step: 1,
         style: {
-          color: 'rgba(0, 0, 0, 0.50)',
-          fontSize: '12px'
+          color: 'rgba(255, 255, 255, .4)',
+          fontSize: '8px'
         }
       },
       min: 0,
@@ -80,11 +85,11 @@ console.log(this.props.sells.sells)
         followPointer: true
     },
     series: [{
+        color: '#FF8669',
         name: "Sells",
         data: this.props.sells.sells,
         marker: {
             fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
                 stops: [
                     [0, 'rgba(255,255,255,0.5)'],
                     [1, Highcharts.Color(Highcharts.getOptions().colors[8]).setOpacity(0.5).get('rgba')]

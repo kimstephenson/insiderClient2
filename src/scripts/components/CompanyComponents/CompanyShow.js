@@ -25,6 +25,7 @@ var CompanyShow = React.createClass({
       <div className="companyShow">
         <CompanyHeader companyName={this.state.companyName}/>
         <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
+        <stats/>
         <NewsFeed companyName={this.props.params.companyName} />
       </div>
     )
