@@ -10,6 +10,7 @@
   font-family: 'Roboto Slab', serif;
   padding-top: 20px;
   padding-bottom: 15px;
+  z-index: -1;
 }
 
 .news-story {
