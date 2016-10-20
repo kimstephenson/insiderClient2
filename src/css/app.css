@@ -17,12 +17,12 @@ body {
 }
 
 .logo {
-  width:30px;
+  width:25px;
   padding-left: 15px;
 }
 
 .logo-title {
-  padding-top: 8px;
+  padding-top: 4px;
   color:#fff;
   display: inline-block;
   font-family: 'Roboto Slab', serif;
@@ -42,7 +42,7 @@ body {
 }
 
 .cluster-chart {
-  margin-top: 29px;
+  margin-top: 28px;
   z-index: 1;
   margin-left: 40px;
   margin-right: 40px;
@@ -50,7 +50,7 @@ body {
 
 .info-bar-bg {
   background-color: #3B4756;
-  height: 200px;
+  height: 185px;
   margin-left: 40px;
   margin-right: 40px;
 
@@ -118,7 +118,7 @@ body {
   outline: none;
   letter-spacing: .4px;
   background-color: #4E5E6E;
-  opacity: .7;
+  opacity: .6;
   margin-right: 20px;
   font-family: 'Roboto', serif;
 }
@@ -131,12 +131,13 @@ input {
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
-  padding-top: 30px;
+  padding-top: 26px;
   background-color: #3B4756;
   margin-bottom: 0;
   margin-top: 20px;
   letter-spacing: .07em;
   margin-bottom: 20px;
+  font-size: 25px
 }
 
 .treemap-company-name {
