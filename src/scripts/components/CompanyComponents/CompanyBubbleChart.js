@@ -6,8 +6,8 @@ var HighchartsMore = require('highcharts-more')(ReactHighcharts.Highcharts)
 
 var CompanyBubbleChart = React.createClass({
 render: function() {
-console.log("sells:")
-console.log(this.props.sells.sells)
+// console.log("sells:")
+// console.log(this.props.sells.sells)
   return(<ReactHighcharts config={
     { chart: {
         type: 'bubble',
