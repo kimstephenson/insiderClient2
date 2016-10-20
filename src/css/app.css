@@ -34,14 +34,32 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+}
+
+.info {
+  position: relative;
+  z-index: 200;
 }
 
 .cluster-chart {
-  width: 100%;
-  background-color: #3B4756;
-  margin-bottom: 2px;
+  margin-top: 29px;
+  z-index: 1;
+  margin-left: 40px;
+  margin-right: 40px;
 }
+
+.info-bar-bg {
+  background-color: #3B4756;
+  height: 200px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+/**//**//**//**//**//**//**//**//**//**//**/
+.main-chart {
+  background-color: #3B4756;
+}
+/**//**//**//**//**//**//**//**//**//**//**/
 
 .highcharts-background {
   fill: #3B4756;
@@ -123,6 +141,3 @@ input {
   padding-left: 30px;
 }
 
-.info {
-  padding-top: 8px
-}

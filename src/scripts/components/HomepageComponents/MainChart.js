@@ -84,7 +84,8 @@ var chartOptions = {
     chart: {
         paddingTop: 15,
         marginLeft: 25,
-        marginRight: 25
+        marginRight: 25,
+        height: 450,
     },
     credits: {
         enabled: false

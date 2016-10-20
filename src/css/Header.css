@@ -6,7 +6,7 @@
   color: #333;
   margin: auto;
   padding: 20px;
-  width: 70%;
+  width: 100%;
 }
 
 .header {
@@ -15,7 +15,7 @@
 
 .HeaderBar {
   display: flex;
-  width: 900px;
+  width: 100%;
   /* flex box : allows boxes and layout easier */
   justify-content: space-between;
   align-items: center;
