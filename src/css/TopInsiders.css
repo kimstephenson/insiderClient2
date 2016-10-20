@@ -1,4 +1,41 @@
-* {
-  border: 1px;
-  color: white;
+.top-insiders {
+  color: #fff;
+  background-color: #3B4756;
+  font-size: 22px;
+  margin: 3em auto;
+  width: 95%;
+}
+
+.top-insiders h1 {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  padding-top: 26px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  letter-spacing: .07em;
+  margin-bottom: 20px;
+  font-size: 25px;
+}  
+.insider-card {
+  box-shadow: 2px 2px 4px 0 #ccc;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 1em 1.5em;
+  padding: 1em;
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  color: #33424D;
+}
+
+.logo img {
+  display: inline-block;
+  padding: 1em;
+  height: 30%;
+  float: left;
+}
+.stats {
+  /*padding-left: 5%;*/
+  /*display: inline-block;*/
 }

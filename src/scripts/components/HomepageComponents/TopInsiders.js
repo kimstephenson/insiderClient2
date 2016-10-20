@@ -23,14 +23,16 @@ var TopInsiders = React.createClass({
     })
   },
   render: function() {
-    var insiders = _.map(this.state.data.top_5_insiders, (insider) => { 
+    var i = 1
+    var insiders = _.map(this.state.data.top_5_insiders, (insider) => {
+      i ++ 
     return(
-      <li key={insider.uuid}>
+      <li className="insider-card" key={i}>
         <div>
-          <div className="logo">
-            <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
-          </div>
           <div className="stats">
+            <div className="logo">
+              <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
+            </div>
             <h2>{insider.name}</h2>
             <p><strong>Position: </strong>
             {insider.position}</p>
@@ -43,7 +45,7 @@ var TopInsiders = React.createClass({
   })
 
     return (
-      <div>
+      <div className="top-insiders">
         <h1>Top Insiders</h1>
         <ul>{insiders}</ul>
       </div>
