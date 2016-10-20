@@ -1,44 +1,38 @@
-var React = require('react')
+import React from 'react'
 import SearchBar from './SearchBar'
 import SearchResults from './SearchResults'
-import $ from 'jquery'
+import GifModal from './GifModal'
+import Request from 'superagent'
+import '../../../css/search.scss'
 
-var SearchPage = React.createClass({
-  getInitialState: function() {
-    return{ results : [] }
-  },
-  componentWillMount: function() {
-    $.ajax({
-      url: "https://insiderapi.herokuapp.com/companies?search=" + this.props.params.searchTerm,
-      dataType: "json",
-      success: function(results) {
-        this.setState({results: results})
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this, status, err.toString())
-      }.bind(this)
+class SearchPage extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      gifs: []
+    }
+  }
+
+  //this.handleTermChange = this.handleTermChange.bind(this)
+
+  handleTermChange = (term) => {
+    const url = `http://api.giphy.com/v1/gifs/search?q=${term}&api_key=dc6zaTOxFJmzC`
+
+    Request.get(url, (err, res) => {
+      this.setState({ gifs: res.body.data })
+      console.log(res.body.data[0])
     })
-  },
-  componentWillReceiveProps: function(nextProps) {
-    $.ajax({
-      url: "https://insiderapi.herokuapp.com/companies?search=" + nextProps.params.searchTerm,
-      dataType: "json",
-      success: function(results) {
-        this.setState({results: results})
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this, status, err.toString())
-      }.bind(this)
-    })
-  },
-  render: function() {
-    return(
-      <div className="SearchPage">
-        <SearchBar/>
-        <SearchResults searchTerm={this.props.params.searchTerm} results={this.state.results}/>
+  }
+
+  render() {
+    return (
+      <div className="search-page">
+        <SearchBar onTermChange={this.handleTermChange} />
+        <SearchResults gifs={this.state.gifs} />
       </div>
     )
   }
-})
+}
 
 export default SearchPage
