@@ -76,8 +76,8 @@ render: function() {
           fontSize: '8px'
         }
       },
-      min: 0,
-      max: 11,
+      // min: 0,
+      // max: 11,
       minTickInterval: 1,
       tickInterval: 1,
       minPadding: 1,

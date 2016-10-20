@@ -16,6 +16,7 @@ var CompanyShow = React.createClass({
       success: function(data) {
         this.setState({data: data,
            confidenceRating: data[0].confidence_rating,
+                 totalTrans: data[3].transactions_total,
                    insiders: data[3].insider_count,
                 companyName: data[0].name,
                        buys: data[1],
@@ -33,7 +34,7 @@ var CompanyShow = React.createClass({
         <div className="companyShow">
           <CompanyHeader companyName={this.state.companyName}/>
           <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
-          <InfoBar company={this.state.data}/>
+          <InfoBar confidenceRating={this.state.confidenceRating} insiders={this.state.insiders} totalTrans={this.state.totalTrans}/>
           <NewsFeed companyName={this.props.params.companyName} />
         </div>
       </div>
