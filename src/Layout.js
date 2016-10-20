@@ -1,15 +1,15 @@
 import React from 'react'
+import Header from './Header'
 
-const Layout = (props) => (
-  <div className='app-container'>
-    {props.children}
-  </div>
-)
-
-const { element } = React.PropTypes
-
-Layout.propTypes = {
-  children: element.isRequired
-}
+const Layout = React.createClass ({
+  render: function() {
+    return(
+      <div className='app-container'>
+        <Header />
+        {this.props.children}
+      </div>
+    )
+  }
+}) 
 
 export default Layout
