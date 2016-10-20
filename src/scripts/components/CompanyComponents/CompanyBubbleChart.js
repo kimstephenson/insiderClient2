@@ -15,7 +15,6 @@ render: function() {
         marginLeft: 150,
         marginBottom: 80,
     },
-
     legend: {
         align: 'right',
         verticalAlign: 'top',
@@ -94,7 +93,6 @@ render: function() {
         }
         }
     },
-
      tooltip: {
         useHTML: true,
         headerFormat: '<table>',
@@ -102,7 +100,7 @@ render: function() {
             '<tr><th>{point.relationship}</th><td></td></tr>' +
             '<tr><th>Date:</th><td>{point.date_string}</td></tr>' +
             '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
-            '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
+            '<tr><th>Shares Traded:</th><td>{point.shares:,.0f}</td></tr>' +
             '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
             '<tr><th>Value Traded:</th><td>\${point.z}</td></tr>',
         footerFormat: '</table>',
