@@ -9,7 +9,7 @@ var InfoBar = React.createClass({
       <div className="info-bar-bg">
         <div className="info-bar">
           <div className="info">
-            <h2 className="number">3052</h2>
+            <h2 className="number">3,052</h2>
             <p className="mustache-header">Insider Trades</p>
           </div>
           <div className="info">
