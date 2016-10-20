@@ -13,19 +13,26 @@
   .search-results {
     column-gap: 1.5em;
     font-size: .85em;
-    margin: 1.5em 0;
+    margin: 1.5em 6em;
     padding: 0;
     .search-card {
       box-shadow: 2px 2px 4px 0 #ccc;
       box-sizing: border-box;
       display: inline-block;
-      margin: 0 0 1.5em;
+      margin: 0 1em 1.5em;
       padding: 1em;
-      width: 30%;
-      color: #fff;
-      img {
-        width: 100%;
+      width: 100%;
+      height: 20%;
+      background-color: #fff;
+      color: #33424D;
+      .logo img {
+        display: inline-block;
         height: 30%;
+        float: left;
+      }
+      .stats {
+        padding-left: 5%;
+        display: inline-block;
       }
     }
   }
