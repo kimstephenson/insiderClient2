@@ -11,17 +11,20 @@ console.log(this.props.sells.sells)
   return(<ReactHighcharts config={
     { chart: {
         type: 'bubble',
-        plotBorderWidth: 1,
+        plotBorderWidth: 0,
         zoomType: 'xy'
-        // backgroundColor: "#32424B"
     },
 
     title: {
-        text: 'Transactions'
+        text: '<div class="chart-subtitle">Cluster Trades</div>',
+        useHTML: true
     },
 
     xAxis: {
-        gridLineWidth: 1,
+        lineWidth: 0,
+        minorGridLineWidth: 0,
+        lineColor: 'transparent',
+        gridLineWidth: 0,
         type: 'datetime',
         dateTimeLabelFormats: {
             day: '%e. %b'
@@ -31,8 +34,8 @@ console.log(this.props.sells.sells)
         },
         labels: {
             style: {
-            color: 'rgba(0, 0, 0, 0.50)',
-            fontSize: '12px'
+            color: 'rgba(255, 255, 255, .4)',
+            fontSize: '8px'
             },
             formatter: function() {
                 return Highcharts.dateFormat('%m/%d', this.value)
@@ -42,6 +45,7 @@ console.log(this.props.sells.sells)
     },
 
     yAxis: {
+        gridLineWidth: 0,
         startOnTick: false,
         endOnTick: false,
         allowDecimals: false,
@@ -49,8 +53,8 @@ console.log(this.props.sells.sells)
         format: '{value}',
         step: 1,
         style: {
-          color: 'rgba(0, 0, 0, 0.50)',
-          fontSize: '12px'
+          color: 'rgba(255, 255, 255, .4)',
+          fontSize: '8px'
         }
       },
       min: 0,
@@ -71,7 +75,7 @@ console.log(this.props.sells.sells)
         headerFormat: '<table>',
         pointFormat: '<tr><th colspan="3"><h3>{point.name}</h3></th></tr>' +
             '<tr><th>{point.relationship}</th><td></td></tr>' +
-            '<tr><th>Date:</th><td>{point.x}</td></tr>' +
+            '<tr><th>Date:</th><td>{point.date_string}</td></tr>' +
             '<tr><th>Insider Score:</th><td>{point.y}</td></tr>' +
             '<tr><th>Shares Traded:</th><td>{point.shares}</td></tr>' +
             '<tr><th>Price Per Share:</th><td>{point.pps}</td></tr>' +
@@ -80,25 +84,19 @@ console.log(this.props.sells.sells)
         followPointer: true
     },
     series: [{
+        color: 'transparent',
         name: "Sells",
         data: this.props.sells.sells,
         marker: {
-            fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
-                stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
-                    [1, Highcharts.Color(Highcharts.getOptions().colors[8]).setOpacity(0.5).get('rgba')]
-                ]
-            }
+            fillColor: '#FF8669'
         }
     }, {
         name: "Buys",
         data: this.props.buys.buys,
         marker: {
             fillColor: {
-                radialGradient: { cx: 0.4, cy: 0.3, r: 0.7 },
                 stops: [
-                    [0, 'rgba(255,255,255,0.5)'],
+                    [0, 'rgba(255,255,255,0.4)'],
                     [1, Highcharts.Color(Highcharts.getOptions().colors[2]).setOpacity(0.5).get('rgba')]
                 ]
             }

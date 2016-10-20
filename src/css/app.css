@@ -1,1 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  background-color: #33424D;
+  font-family: 'Roboto Slab', serif;
+  color: #2F424E;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+.cluster-chart {
+  height: 429px;
+  width: 100%;
+  background-color: #3B4756;
+  margin-bottom: 2px;
+}
+
+.highcharts-background {
+  fill: #3B4756;
+}
+
+.highcharts-grid-line {
+    fill: none;
+    stroke: #3B4756;
+}
+
+.highcharts-tooltip text {
+    fill: #fff;
+}
 

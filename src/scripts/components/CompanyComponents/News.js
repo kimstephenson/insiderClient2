@@ -29,23 +29,23 @@ const News = React.createClass({
           <a href={article.thread.url}>
             <img className='news-img' src={article.thread.main_image} alt='main-img' />
           </a>
+
+          <div className="news-text">
+
           <h3>
             <a href={article.thread.url} >{article.title}</a>
           </h3>
+
           <p><span>{article.published}</span></p>
           <p>{article.text.split('.').slice(0,2).join(' ')}</p>
+          </div>
         </li>
       )
     })
 
     return (
       <div className="news-story">
-        <p>most recent week's news...</p>
-        <h3>{ this.props.companyName.replace(/\b[a-z]/g,function(f){
-                return f.toUpperCase()
-              })
-            }
-        </h3>
+
         <ul>{articles}</ul>
       </div>
     )
