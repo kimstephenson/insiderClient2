@@ -110,3 +110,7 @@ body {
   text-align: center;
   color: #31424D;
 }
+
+.highcharts-series-group {
+  padding-left: 30px;
+}

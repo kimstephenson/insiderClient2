@@ -82,7 +82,9 @@ var MainChart = React.createClass({
 
 var chartOptions = {
     chart: {
-        paddingTop: 20
+        paddingTop: 15,
+        marginLeft: 25,
+        marginRight: 25
     },
     credits: {
         enabled: false
