@@ -1,5 +1,5 @@
 var React = require('react')
-import '../../../css/Header.css'
+import '../../../css/infobar.scss'
 
 var InfoBar = React.createClass({
   render: function(){
@@ -7,17 +7,17 @@ var InfoBar = React.createClass({
   console.log(this.props)
     return (
       <div className="info-bar">
-        <div>
-          <h2></h2>
-          <p>Confidence Rating</p>
+        <div className="info">
+          <h2 className="number">6.5</h2>
+          <p className="mustache-header">Confidence Rating</p>
         </div>
-        <div>
-          <h2>4</h2>
-          <p>Insiders</p>
+        <div className="info">
+          <h2 className="number">8</h2>
+          <p className="mustache-header">Insiders</p>
         </div>
-        <div>
-          <h2>$15</h2>
-          <p>Total Traded This Quarter</p>
+        <div className="info">
+          <h2 className="number">$1.2B</h2>
+          <p className="mustache-header">Total Traded This Quarter</p>
         </div>
       </div>
     )
