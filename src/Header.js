@@ -11,11 +11,9 @@ var Header = React.createClass({
     this.props.setSearchTerm(event.target.value)
   },
 
-  handleKeyPress: function(event) {
-    if (event.key === 'Enter') {
-      console.log('router')
-      browserHistory.push(`/search/${this.state.searchTerm}`)  
-    }
+  gotoSearch (event) {
+    browserHistory.push('search')
+    event.preventDefault()
   },
 
   render: function() {
@@ -25,8 +23,9 @@ var Header = React.createClass({
             <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
             <div className="logo-title">Smarter Bear</div>
           </Link>
-
-        <input type='text' className='searchBar' placeholder='Search by company or ticker' value={this.props.searchTerm} onChange={this.handleSearchTermEvent} onKeyPress={this.handleKeyPress} />
+        <form onSubmit={this.gotoSearch}>
+          <input type='text' className='searchBar' placeholder='Search by company or ticker' value={this.props.searchTerm} onChange={this.handleSearchTermEvent} onKeyPress={this.handleKeyPress} />
+        </form>
       </header>
     )
   }
