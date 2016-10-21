@@ -1,6 +1,7 @@
 const React = require('react')
 const { object } = React.PropTypes
 import SearchCard from './SearchCard'
+import Header from '../../../Header'
 import '../../../css/search.scss'
 
 const Search = React.createClass({
@@ -14,7 +15,7 @@ const Search = React.createClass({
     route: object
   },
   
-  handleSearchTermEvent (event) {
+  handleSearchTermChange (event) {
     this.setState({ searchTerm: event.target.value })
   },
 
@@ -22,7 +23,11 @@ const Search = React.createClass({
     return (
 
       <div className='search-page'>
-
+        <Header 
+          handleSearchTermChange={this.handleSearchTermChange}
+          searchTerm={this.state.searchTerm}
+          showSearch
+        />
         <div className='search-results'>
           {this.props.route.companies
             .filter((company) => `${company.name} ${company.ticker}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0 )

@@ -6,25 +6,23 @@ import './css/Header.css'
 var Header = React.createClass({
   getInitialState () {
     return {
-      searchTerm: 'Search company or ticker'
+      searchTerm: ''
     }
   },
 
-   handleSearchTermEvent (event) {
-    this.setState({ searchTerm: event.target.value })
+  handleSearchTermEvent (event) {
+    this.props.handleSearchTermChange(event.target.value)
   },
 
   render: function() {
     return(
       <header className="HeaderBar header">
-        <div>
           <Link to='/' className='brand-link'>
             <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
             <div className="logo-title">Smarter Bear</div>
           </Link>
-        </div>
 
-        <input value={this.state.searchTerm} className='searchBar' type='text' placeholder='Search' onChange={this.handleSearchTermEvent} />
+        <input type='text' className='searchBar' placeholder='Search by company or ticker' value={this.props.searchTerm} onChange={this.handleSearchTermEvent} />
       </header>
     )
   }
