@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import './css/app.css'
 
 const Layout = React.createClass ({
   getInitialState() {
@@ -13,7 +14,7 @@ const Layout = React.createClass ({
   render: function() {
     return(
       <div className='app-container'>
-        <Header searchTerm={this.state.searchTerm} handleSearchTermChange={this.handleSearchTermChange} />
+        <Header />
         {this.props.children}
       </div>
     )
