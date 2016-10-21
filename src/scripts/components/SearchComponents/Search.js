@@ -15,8 +15,8 @@ const Search = React.createClass({
     route: object
   },
   
-  handleSearchTermChange (event) {
-    this.setState({ searchTerm: event.target.value })
+  handleSearchTermChange (value) {
+    this.setState({ searchTerm: value })
   },
 
   render() {
