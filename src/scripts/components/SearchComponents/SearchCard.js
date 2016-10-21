@@ -5,7 +5,7 @@ const SearchCard = (props) => {
     <a href={`/companies/${props.name}`}>
       <div className="search-card" >
         <div className="logo">
-          <img src={'http://fakeimg.pl/300'} />
+          <img src={`/company-logos/${props.id}.png`} />
         </div>
         <div className="stats">
           <h2>{props.name} ({props.ticker})</h2>
