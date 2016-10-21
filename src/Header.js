@@ -20,7 +20,7 @@ var Header = React.createClass({
     return(
       <header className="HeaderBar header">
           <Link to='/' className='brand-link'>
-            <img src='/smarter-bear-logo.png' alt="bear-logo" className="logo"/>
+            <img src='/smarter-bear-logo.png' alt="bear-logo" className="header-logo"/>
             <div className="logo-title">Smarter Bear</div>
           </Link>
         <form onSubmit={this.gotoSearch}>
