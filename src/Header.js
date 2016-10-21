@@ -3,14 +3,12 @@ const { Link } = require('react-router')
 import { browserHistory } from 'react-router';
 import SearchBar from './scripts/components/SearchComponents/SearchBar'
 import './css/Header.css'
+const { connector } = require('./Store')
 
 var Header = React.createClass({
-  getInitialState () {
-    return { searchTerm: '' }
-  },
 
   handleSearchTermEvent (event) {
-    this.props.handleSearchTermChange(event.target.value)
+    this.props.setSearchTerm(event.target.value)
   },
 
   handleKeyPress: function(event) {
@@ -34,4 +32,4 @@ var Header = React.createClass({
   }
 })
 
-export default Header
+export default connector(Header)
