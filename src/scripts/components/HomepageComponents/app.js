@@ -4,6 +4,7 @@ import Layout from '../../../Layout'
 import AppInfo from './AppInfo'
 import MainChart from './MainChart'
 import TopInsiders from './TopInsiders'
+const { connector } = require('../../../Store')
 
 
 var App = React.createClass({
@@ -28,4 +29,4 @@ var App = React.createClass({
   }
 })
 
-export default App
+export default connector(App)

@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
+import { withRouter } from 'react-router'
 import Layout from './Layout'
 import App from './scripts/components/HomepageComponents/app';
 import CompanyShow from './scripts/components/CompanyComponents/CompanyShow';
 import Search from './scripts/components/SearchComponents/Search'
 import './css/index.css';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-const { companies } = require('../public/data')
+const { companies } = require('../public/companies')
+const { insiders } = require('../public/insiders')
 const { store } = require('./Store')
 const { Provider } = require('react-redux')
 
@@ -26,12 +28,9 @@ const Index = React.createClass({
     return (
       <Provider store={store}>
         <Router history={browserHistory}>
-          <Route path='/' component={Layout}>
-            <IndexRoute component={App}/>
-            <Route path="/companies/:companyName" component={CompanyShow} onEnter={this.assignCompany} />
-          </Route>
+          <Route path='/' component={App} insiders={insiders} />
+          <Route path="/companies/:companyName" component={CompanyShow} onEnter={this.assignCompany} />
           <Route path="/search" component={Search} companies={companies} />
-          <Route path="/search/:term" component={Search} />
         </Router>
       </Provider>
     )
