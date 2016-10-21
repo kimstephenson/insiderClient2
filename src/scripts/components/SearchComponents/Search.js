@@ -6,9 +6,7 @@ import '../../../css/search.scss'
 
 const Search = React.createClass({
   getInitialState () {
-    return {
-      searchTerm: ''
-    }
+    return { searchTerm: '' }
   }, 
 
   propTypes: {
