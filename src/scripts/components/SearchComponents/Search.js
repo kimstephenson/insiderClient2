@@ -1,34 +1,25 @@
 const React = require('react')
-const { object } = React.PropTypes
+const { object, string } = React.PropTypes
 import SearchCard from './SearchCard'
 import Header from '../../../Header'
+const { connector } = require('../../../Store')
 import '../../../css/search.scss'
 
 const Search = React.createClass({
-  getInitialState () {
-    return { searchTerm: '' }
-  }, 
 
   propTypes: {
-    route: object
-  },
-  
-  handleSearchTermChange (value) {
-    this.setState({ searchTerm: value })
+    route: object, 
+    searchTerm: string
   },
 
   render() {
     return (
 
       <div className='search-page'>
-        <Header 
-          handleSearchTermChange={this.handleSearchTermChange}
-          searchTerm={this.state.searchTerm}
-          showSearch
-        />
+        <Header showSearch />
         <div className='search-results'>
           {this.props.route.companies
-            .filter((company) => `${company.name} ${company.ticker}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0 )
+            .filter((company) => `${company.name} ${company.ticker}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0 )
             .map((company) => (
             <SearchCard {...company} key={company.id} />
           ))}
@@ -38,4 +29,4 @@ const Search = React.createClass({
   }
 })
 
-export default Search
+export default connector(Search)
