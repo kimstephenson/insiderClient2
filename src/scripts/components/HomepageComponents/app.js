@@ -1,7 +1,7 @@
 var React = require('react');
 import '../../../css/app.css'
+import Layout from '../../../Layout'
 import AppInfo from './AppInfo'
-import SearchBar from '../SearchComponents/SearchBar'
 import MainChart from './MainChart'
 import TopInsiders from './TopInsiders'
 
@@ -9,8 +9,7 @@ import TopInsiders from './TopInsiders'
 var App = React.createClass({
   render: function() {
     return(
-      <div className="App">
-        <div className="container">
+      <Layout>
           <div className="cluster-chart">
             <MainChart/>
           </div>
@@ -24,9 +23,7 @@ var App = React.createClass({
           
           <div className="footer">
           </div>
-
-        </div>
-      </div>
+      </Layout>
     )
   }
 })
