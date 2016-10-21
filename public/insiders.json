@@ -1,0 +1,39 @@
+{
+  "top_5_insiders": {
+    "SHRIRAM KAVITARK RAM":{
+      "name":"SHRIRAM KAVITARK RAM",
+      "company":"Google Inc",
+      "position":"Director",
+      "total_trades":394,
+      "total_trade_value":"-$503,548,054.71"
+    },
+    "SCHMIDT ERIC E":{
+      "name":"SCHMIDT ERIC E",
+      "company":"Google Inc",
+      "position":"Officer",
+      "total_trades":295,
+      "total_trade_value":"-$666,632,805.93"
+    },
+    "COX CHRISTOPHER K":{
+      "name":"COX CHRISTOPHER K",
+      "company":"Facebook",
+      "position":"Officer",
+      "total_trades":266,
+      "total_trade_value":"-$2,926,396,427.86"
+    },
+    "PAGE LAWRENCE":{
+      "name":"PAGE LAWRENCE",
+      "company":"Google Inc",
+      "position":"Officer",
+      "total_trades":243,
+      "total_trade_value":"-$400,798,365.86"
+    },
+    "DOERR L JOHN":{
+      "name":"DOERR L JOHN",
+      "company":"Google Inc",
+      "position":"Director",
+      "total_trades":195,
+      "total_trade_value":"-$303,608,999.57"
+    }
+  }
+}
