@@ -1,8 +1,10 @@
 var React = require ('react')
-import CompanyBubbleChart from './CompanyBubbleChart'
 import CompanyHeader from './CompanyHeader'
+import CompanyBubbleChart from './CompanyBubbleChart'
+import Header from '../../../Header'
 import NewsFeed from './NewsFeed'
 import InfoBar from './InfoBar'
+import Layout from '../../../Layout'
 import $ from 'jquery'
 
 var CompanyShow = React.createClass({
@@ -31,8 +33,8 @@ var CompanyShow = React.createClass({
   },
   render: function() {
     return(
-
-        <div className="companyShow">
+      <Layout>
+        <div className="companyShow cluster-chart">
           <CompanyHeader companyName={this.state.companyName}/>
           <CompanyBubbleChart buys={this.state.buys} sells={this.state.sells}/>
         <div className="info-bar-bg-companies-pg">
@@ -40,7 +42,7 @@ var CompanyShow = React.createClass({
         </div>
           <NewsFeed companyName={this.props.params.companyName} />
         </div>
-
+      </Layout>
     )
   }
 })

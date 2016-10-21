@@ -42,17 +42,17 @@ body {
 }
 
 .cluster-chart {
-  margin-top: 28px;
+  margin-top: 3%;
   z-index: 1;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 
 .info-bar-bg {
   background-color: #3B4756;
-  height: 185px;
-  margin-left: 40px;
-  margin-right: 40px;
+  height: 45%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 
 .info-bar-bg-companies-pg {
@@ -90,8 +90,8 @@ body {
 }
 
 .companyShow {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 }
 
 .highcharts-data-labels .highcharts-series-0 {
