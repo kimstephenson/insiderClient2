@@ -28,6 +28,7 @@ const Index = React.createClass({
           <Route path="/companies/:companyName" component={CompanyShow} onEnter={this.assignCompany} />
         </Route>
         <Route path="/search" component={Search} companies={companies} />
+        <Route path="/search/:term" component={Search} />
       </Router>
     )
   }
