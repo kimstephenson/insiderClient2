@@ -1,1 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  background-color: #33424D;
+  font-family: 'Roboto Slab', serif;
+  color: #2F424E;
+}
+
+.logo {
+  width:25px;
+  padding-left: 15px;
+}
+
+.logo-title {
+  padding-top: 4px;
+  color:#fff;
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  padding-left: 15px;
+  vertical-align: top;
+  letter-spacing: .08em;
+}
+
+.container, .header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info {
+  position: relative;
+/*  z-index: 200;*/
+}
+
+.cluster-chart {
+  margin-top: 3%;
+  z-index: 1;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.info-bar-bg {
+  background-color: #3B4756;
+  height: 45%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.info-bar-bg-companies-pg {
+  background-color: #3B4756;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**/
+.main-chart {
+  background-color: #3B4756;
+}
+/**//**//**//**//**//**//**//**//**//**//**/
+
+.highcharts-background {
+  fill: #3B4756;
+}
+
+.highcharts-grid-line {
+    fill: none;
+    stroke: #3B4756;
+}
+
+.highcharts-tooltip text {
+    fill: #fff;
+}
+
+.chart-subtitle {
+  text-transform: uppercase;
+  color:#fff;
+  font-family: 'Roboto', serif;
+  font-weight: lighter;
+  letter-spacing: .15em;
+  padding-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 49%
+}
+
+.companyShow {
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+}
+
+.highcharts-data-labels .highcharts-series-0 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.searchBtn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 40px;
+  background-color: #333;
+  color: #fafafa;
+  border-color: transparent;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.searchBar {
+  height: 27px;
+  border-radius: 2px;
+  width: 180px;
+  border:none;
+  font-size: 12px;
+  padding-left: 18px;
+  box-shadow: inset 0px 0px 3px rgba(0,0,0,0.4);
+  outline: none;
+  letter-spacing: .4px;
+  background-color: #4E5E6E;
+  opacity: .6;
+  margin-right: 20px;
+  font-family: 'Roboto', serif;
+}
+
+input {
+  color: #fff;
+}
+
+.mainchart-header {
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  padding-top: 26px;
+  background-color: #3B4756;
+  margin-bottom: 0;
+  margin-top: 20px;
+  letter-spacing: .07em;
+  margin-bottom: 20px;
+  font-size: 25px
+}
+
+.treemap-company-name {
+  font-family: 'Roboto', serif;
+  font-size: 15px;
+  text-align: center;
+  color: #31424D;
+}
+
+.highcharts-series-group {
+  padding-left: 30px;
+}
 
