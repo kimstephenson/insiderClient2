@@ -14,7 +14,7 @@
   .search-results {
     column-gap: 1.5em;
     font-size: .85em;
-    margin: 1.5em 6em;
+    margin: 1em 6em;
     padding: 0;
     text-align:center;
     .search-card {
@@ -22,21 +22,24 @@
       display: inline-block;
       text-align: center;
       margin: .2em;
-      padding: 1em;
+      padding: .3em;
       padding-right: 35px;
       width: 80%;
-      height: 235px;
+      height: 210px;
 
       background-color: #fff;
       color: #33424D;
+
       .logo img {
         display: inline-block;
-        height: 30%;
         float: left;
+        width: 150px;
+
       }
       .stats {
         padding-left: 5%;
         display: inline-block;
+        padding-bottom:1%;
       }
     }
   }
