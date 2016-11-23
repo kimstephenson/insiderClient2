@@ -2,7 +2,9 @@
 
 Ever wanted to see at a glance what the top insiders from the hottest companies are doing with their shares of company stock?
 
-This React front end application renders data and visualizations from our Rails API's JSON responses.  API repo can be found [here](https://www.github.com/everysum1/insiderAPI), and does all the back end work of requesting insider transactions from SEC servers, scrapes FTP servers for corresponding XML files, parses files into database objects using [Nokogiri](https://www.nokogiri.org), and serves up JSON-formatted information. You can find live version [here] (https://yourinsider.herokuapp.com). 
+This React front end application renders data and visualizations from our Rails API's JSON responses.  API repo can be found [here](https://www.github.com/everysum1/insiderAPI), and does all the back end work of requesting insider transactions from SEC servers, scrapes FTP servers for corresponding XML files, parses files into database objects using [Nokogiri](https://www.nokogiri.org), and serves up JSON-formatted information. 
+
+You can check out the live version [here] (https://yourinsider.herokuapp.com). 
 
 ![homepage] (https://github.com/everysum1/insiderAPI/blob/development/app/assets/images/SmarterBearHomepage.png)
 
