@@ -1,4 +1,4 @@
-# Insider Client
+# Smarter Bear Client
 
 Ever wanted to see at a glance what the top insiders from the hottest companies are doing with their shares of company stock?
 
